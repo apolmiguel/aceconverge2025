@@ -1,3 +1,4 @@
 tf.log
 *.ipynb
 __pycache__
+sbatch*
