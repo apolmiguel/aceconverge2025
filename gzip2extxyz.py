@@ -7,6 +7,7 @@ from y2ace_funcs import *
 # Variables
 property_string = 'Properties=species:S:1:pos:R:3:force:R:3:tags:I:1' 
 cell_string = 'unit_cell=conventional'
+config_string = 'config_type=shaiducarbon'
 gzip_file = sys.argv[1]
 outname = sys.argv[2]
 
@@ -31,9 +32,9 @@ def gzip2extxyz(gzipfile, outname, verbose=False):
             lattice_string = 'Lattice=' + '\"' + " ".join(f"{j}" for j in entry.get_cell()[:].flatten().tolist()) + '\"'
             energy_string = 'energy=' + str(dataset['energy'].iloc[i])
             pbc_string = 'pbc=' + '\"' + " ".join(f"{j}" for j in np.where(entry.get_pbc(),'T','F')) + '\"'
-            file.write(f"{natom}\n{lattice_string} {property_string} {energy_string} {cell_string} {pbc_string}\n")
+            file.write(f"{natom}\n{lattice_string} {property_string} {config_string} {energy_string} {cell_string} {pbc_string}\n")
             if verbose:
-                print(natom,'\n' + lattice_string + ' ' + property_string + ' ' + energy_string + ' ' + cell_string + ' ' + pbc_string)
+                print(natom,'\n' + lattice_string + ' ' + property_string + ' ' + config_string + ' ' + energy_string + ' ' + cell_string + ' ' + pbc_string)
 
             species = [[k] for k in entry.get_chemical_symbols()]
             pos = entry.get_positions().tolist()

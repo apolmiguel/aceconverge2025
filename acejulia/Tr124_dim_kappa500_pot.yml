@@ -1,0 +1,1003 @@
+Versions:
+  JuLIP: 0.16.0
+  ACEbase: 0.4.4
+  ACE1x: 0.1.11
+  ACE1: 0.12.5
+  ACEmd: 0.1.19
+  ACEpotentials: 0.6.11
+  ACEfit: 0.2.5
+IP:
+  components:
+    - E0:
+        C: -245.44385736
+      __id__: "JuLIP_OneBody"
+    - T:
+        T: "Float64"
+        __id__: "Type"
+      basis:
+        Pr:
+          - envelope:
+              rcut: 7.0
+              T:
+                T: "Float64"
+                __id__: "Type"
+              r0: 1.5
+              __id__: "ACE1_PolyEnvelope"
+              p: 2
+            J:
+              tl: 0.43959971408148674
+              B:
+                - 0.0
+                - -4.449428661505343
+                - -4.974619936023893
+                - -5.06591764496412
+                - -5.097499141588738
+                - -5.112065682681464
+                - -5.11997675577803
+                - -5.124757381736561
+                - -5.12787470004645
+                - -5.130028110737273
+              A:
+                - 0.9999999999999998
+                - 6.181480335100276
+                - 6.911115482122562
+                - 7.037953113510239
+                - 7.081828499585539
+                - 7.102065432047048
+                - 7.113056088712467
+                - 7.119697693197079
+                - 7.124028505824207
+                - 7.127020185622097
+              T:
+                T: "Float64"
+                __id__: "Type"
+              pl: 0
+              tr: 1.0
+              C:
+                - 0.0
+                - 0.0
+                - -1.1180356658063384
+                - -1.0183527003297255
+                - -1.0062341117321811
+                - -1.0028575857862836
+                - -1.001547529626531
+                - -1.0009337202464776
+                - -1.0006082860275805
+                - -1.0004199421430229
+              pr: 0
+              __id__: "ACE1_OrthPolyBasis"
+            ru: 7.0
+            trans:
+              rin: 0.0
+              r0: 1.5
+              q: 3
+              __id__: "ACE1_Agnesi2Transform"
+              p: 1
+              a: 0.2857142857142857
+            __id__: "ACE1_TransformedPolys"
+            rl: 0.0
+        zlist:
+          list:
+            - 6
+          __id__: "JuLIP_SZList"
+        __id__: "ACE1_PolyPairBasis"
+      coeffs:
+        - 9.56929033776388
+        - -23.73847099226515
+        - 31.86488251807065
+        - -24.94701030245997
+        - 25.92934690735256
+        - -20.180142314604314
+        - 15.583558325293476
+        - -9.320807614255388
+        - 4.524725230817843
+        - -1.4746101217923413
+      __id__: "ACE1_PolyPairPot"
+      committee: "nothing"
+    - meta:
+        ACE1_version: 0.12.5
+      coeffs:
+        - real:
+            - 5.708141950318015e-12
+            - -8.877578934120554e-13
+            - 1.1099886537990292e-11
+            - 5.15369499293084e-12
+            - -4.317188289555033e-12
+            - 8.469757187966134e-12
+            - -1.2448138295530182e-12
+            - -7.38028874950027e-12
+            - 6.377845431488022e-14
+            - 1.3333790253282701e-12
+            - 8.53169163039929e-13
+            - 1.221846557840232e-13
+            - -2.816393659972921e-13
+            - 1.7714781259269253e-12
+            - 3.0518417890143053e-13
+            - -1.4794720516891367e-12
+            - 4.305321393613045e-13
+            - 1.927710892678376e-12
+            - -4.202448416209926e-12
+            - 5.896203604195503e-13
+            - 2.266214910410879e-12
+            - 2.1479999956802946e-12
+            - -1.725055006040516e-12
+            - -4.623724005361579e-13
+            - 3.8020707348171193e-13
+            - 2.1342983539588914e-13
+            - -1.8074950122664641e-12
+            - 3.0567205737409393e-12
+            - 8.625275030202581e-13
+            - 4.62372400536158e-13
+            - -3.80207073481712e-13
+            - -2.134298353958892e-13
+            - 1.8074950122664645e-12
+            - -3.05672057374094e-12
+            - -4.62372400536158e-13
+            - 3.80207073481712e-13
+            - 2.134298353958892e-13
+            - -1.8074950122664645e-12
+            - 3.05672057374094e-12
+            - 9.154571421851209e-13
+            - 8.719888323087658e-13
+            - -1.5702805454933653e-12
+            - -9.154571421851213e-13
+            - -8.719888323087664e-13
+            - 1.5702805454933663e-12
+            - 4.577285710925606e-13
+            - 8.719888323087664e-13
+            - -1.5702805454933663e-12
+            - -8.719888323087664e-13
+            - 1.5702805454933663e-12
+            - 8.719888323087664e-13
+            - -1.5702805454933663e-12
+            - -1.83075206133313e-12
+            - 2.8214871884327616e-12
+            - 6.878931212609485e-14
+            - -5.1152591130335845e-12
+            - 4.3746780501016067e-13
+            - 1.2393049983380992e-13
+            - -2.527647310723015e-13
+            - 3.4542364082508002e-12
+            - -1.3082081374590306e-12
+            - 7.453907900970376e-13
+            - 3.8015286738375555e-12
+            - -1.7271182041254003e-12
+            - 1.3082081374590308e-12
+            - -7.453907900970377e-13
+            - -3.801528673837556e-12
+            - -1.3082081374590308e-12
+            - 7.453907900970377e-13
+            - 3.801528673837556e-12
+            - -6.42006459952758e-12
+            - 6.420064599527583e-12
+            - -3.2100322997637914e-12
+            - -1.7115613003725911e-12
+            - -7.351011968726279e-12
+            - 3.054026023406451e-13
+            - -1.6264438287681026e-12
+            - 1.1873656561292867e-12
+            - 7.327051881134757e-12
+            - 5.205055203245271e-12
+            - -3.663525940567379e-12
+            - -5.205055203245272e-12
+            - 5.205055203245272e-12
+            - 6.964184669580032e-13
+            - -2.266415529623046e-12
+            - 3.0408345598476994e-12
+            - 5.566683546279149e-13
+          T:
+            T: "Float64"
+            __id__: "Type"
+          size: (87,)
+          __id__: "ACE_ArrayOfNumber"
+      __id__: "ACE1_PIPotential"
+      pibasis:
+        basis1p:
+          spec:
+            - nlmz:
+                - 1
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 1
+                - 1
+                - -1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 1
+                - 1
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 1
+                - 1
+                - 1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 1
+                - 2
+                - -2
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 1
+                - 2
+                - -1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 1
+                - 2
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 1
+                - 2
+                - 1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 1
+                - 2
+                - 2
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 2
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 2
+                - 1
+                - -1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 2
+                - 1
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 2
+                - 1
+                - 1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 2
+                - 2
+                - -2
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 2
+                - 2
+                - -1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 2
+                - 2
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 2
+                - 2
+                - 1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 2
+                - 2
+                - 2
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 3
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 3
+                - 1
+                - -1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 3
+                - 1
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 3
+                - 1
+                - 1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 3
+                - 2
+                - -2
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 3
+                - 2
+                - -1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 3
+                - 2
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 3
+                - 2
+                - 1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 3
+                - 2
+                - 2
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 4
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 4
+                - 1
+                - -1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 4
+                - 1
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 4
+                - 1
+                - 1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 5
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 5
+                - 1
+                - -1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 5
+                - 1
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 5
+                - 1
+                - 1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 6
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 6
+                - 1
+                - -1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 6
+                - 1
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 6
+                - 1
+                - 1
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 7
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 8
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 9
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 10
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 11
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 12
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+            - nlmz:
+                - 13
+                - 0
+                - 0
+                - 0
+              __id__: "ACE1_PSH1pBasisFcn"
+          J:
+            envelope:
+              __id__: "ACE1_OneEnvelope"
+            J:
+              tl: -1.0
+              B:
+                - 0.0
+                - -2.0786140873094945e-18
+                - -7.017609472481619e-18
+                - 2.412551411320251e-17
+                - -4.62164749360015e-17
+                - 8.442290037528487e-17
+                - -1.036773538695508e-16
+                - 1.0425048391689846e-16
+                - -1.0935396246574519e-16
+                - 1.1420171246516114e-16
+                - -1.2236837934382784e-16
+                - 1.182192736628651e-16
+                - -8.383224079690349e-17
+                - 1.6979098049736654e-16
+              A:
+                - 1.5687375497513916
+                - 3.316624790355401
+                - 2.6739483914241924
+                - 2.430862174022013
+                - 2.3048861143233235
+                - 2.2291771507065796
+                - 2.179449471771357
+                - 2.1447610589554333
+                - 2.11947811973324
+                - 2.1004201260569073
+                - 2.0856653614930205
+                - 2.0739902138057946
+                - 2.064582282328315
+                - 2.0568833782436915
+              T:
+                T: "Float64"
+                __id__: "Type"
+              pl: 2
+              tr: 1.0
+              C:
+                - 0.0
+                - 0.0
+                - -0.8062257748298566
+                - -0.9090909090909166
+                - -0.9481763873554975
+                - -0.9671528397232887
+                - -0.9776923610941106
+                - -0.9840838646340674
+                - -0.9882117688044432
+                - -0.9910081668223438
+                - -0.9929753269925167
+                - -0.9944021951446381
+                - -0.9954638496291572
+                - -0.9962709628235593
+              pr: 2
+              __id__: "ACE1_OrthPolyBasis"
+            ru: 6.999999999999998
+            trans:
+              transforms:
+                - xy:
+                    - 1.0
+                    - 0.058765879773119846
+                    - -1.0
+                    - 1.0
+                  t:
+                    rin: 0.0
+                    r0: 1.5
+                    q: 4
+                    __id__: "ACE1_Agnesi2Transform"
+                    p: 2
+                    a: 0.7692307692307693
+                  __id__: "ACE1_AffineT"
+              zlist:
+                list:
+                  - 6
+                __id__: "JuLIP_SZList"
+              __id__: "ACE1_MultiTransform"
+            __id__: "ACE1_TransformedPolys"
+            rl: 0.0
+          zlist:
+            list:
+              - 6
+            __id__: "JuLIP_SZList"
+          SH:
+            T:
+              T: "Float64"
+              __id__: "Type"
+            maxL: 2
+            __id__: "ACE1_SHBasis"
+          __id__: "ACE1_BasicPSH1pBasis"
+        inner:
+          -
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [6, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [7, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [8, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [4, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 2, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [9, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [1, 2, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [9, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [5, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 2, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [6, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, -2, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 2, 2, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [6, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [6, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 2, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 2, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [6, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [1, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [10, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [4, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [7, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [8, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, 2, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 2, -2, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, 2, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 2, -2, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [1, 2, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [6, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [8, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 2, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 2, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [4, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [6, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 2, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 2, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [7, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 2, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [6, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, -2, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [1, 2, 2, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [12, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [7, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, -2, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 2, 2, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [11, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [1, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [4, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [5, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [13, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 2, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 2, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [5, 0, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"),)
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [1, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [4, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [3, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 1, 0, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 1, -1, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [3, 1, 1, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+            - oneps: (Dict{String, Any}("nlmz" => [2, 2, -2, 6], "__id__" => "ACE1_PSH1pBasisFcn"), Dict{String, Any}("nlmz" => [2, 2, 2, 6], "__id__" => "ACE1_PSH1pBasisFcn"))
+              z0:
+                z: 6
+                __id__: "JuLIP_AtomicNumber"
+              __id__: "ACE1_PIBasisFcn"
+        __id__: "ACE1_PIBasis"
+      committee: "nothing"
+  __id__: "JuLIP_SumIP"
