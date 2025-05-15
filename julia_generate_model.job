@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH -A Sis25_degironc_0
+#SBATCH -p boost_usr_prod
+#SBATCH --qos=boost_qos_dbg
+#SBATCH --job-name=acejl_calc
+#SBATCH --output=sbatch/jobouts/%x.%j.out
+#SBATCH --error=sbatch/joberrs/%x.%j.err
+#SBATCH --mem=100000MB
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:1
+#SBATCH --time 00:30:00
+
+# Variables
+
+# Modules
+. ~/bin/module_load_ace
+
+#Load environment
+source $PUBLIC/environments/ace/bin/activate
+
+# Your commands here
+date
+julia generate_model.jl
+date
+
