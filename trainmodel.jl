@@ -13,7 +13,14 @@ println("Training set has ", length(train_data), " entries.\nValidation set has 
 
 
 ## Variables ##
-if length(ARGS) >= 3 && ARGS[3] == "purify"
+if ARGS[3] == "dim"
+    rcut = 7.0 # cutoff for dimer dataset
+else
+    rcut = 5.0 # cutoff for diamond or generic 
+end
+println("rcut = $rcut")
+
+if length(ARGS) >= 4 && ARGS[4] == "purify"
     pureflag = true # canonical CE
 else
     pureflag = false # self-interacting CE
@@ -22,7 +29,7 @@ prefix = "acejulia/" * traindir[10:end-4] # for saving files
 orders = [2,3]
 degrees = [[40,10], [40,10,9]] 
 r0 = 1.286958464 # minimum from dimer dataset
-rcut = 7.0 # for dimer 
+
 
 ## Basis creation ## 
 println("\nCreating basis")

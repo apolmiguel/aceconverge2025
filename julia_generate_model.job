@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=jl_flowtest
+#SBATCH --job-name=jl_gen1k
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -13,10 +13,9 @@
 #SBATCH --time 00:30:00
 
 # Variables
-traindir=datasets/Tr124_dim.xyz
-valdir=datasets/Val123_dim.xyz
-potdir=acejulia/Tr124_dim/border3/potential.json
-
+traindir=datasets/Tr1k_n.xyz
+valdir=datasets/Val1k_n.xyz
+rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 # Load modules
 . ~/bin/module_load_ace
 
@@ -25,7 +24,7 @@ potdir=acejulia/Tr124_dim/border3/potential.json
 
 # Your commands here
 date
-# julia trianmodel_dim.jl $traindir $valdir
+julia trainmodel.jl $traindir $valdir $rcutflag
 julia get_errs_dimcurves.jl $traindir $valdir
 date
 
