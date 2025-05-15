@@ -4,18 +4,28 @@ Pkg.activate(".")
 
 using ACEpotentials, DelimitedFiles
 
+## Data load ## 
+# traindir = "/leonardo_work/Sis25_degironc_0/apol/aceconverge2025/datasets/Tr124_dim.xyz"
+traindir = ARGS[1]
+train_data = read_extxyz(traindir);
+# valdir = "/leonardo_work/Sis25_degironc_0/apol/aceconverge2025/datasets/Val123_dim.xyz"
+valdir = ARGS[2]
+val_data = read_extxyz(valdir);
+println("train_data entries: ", length(train_data), "\nval_data entries: ", length(val_data)) # test
 
-## Variables ## 
-# user-input
-rcut = 7.0 # 7.0 if dimer, 5.0 if diamond or generic
-pureflag = false # true if want to get canonical CE
+## Variables ##
+if length(ARGS) >= 3 && ARGS[3] == "purify"
+    pureflag = true # canonical CE
+else
+    pureflag = false # self-interacting CE
+end
 
 # controlled
 orders = [2,3]
 degrees = [[40,10], [40,10,9]] # actual
 # degrees = [[5,5], [5,5,5]] # testing 
-r0 = 1.286958464 # minimum from dimer dataset 
-
+r0 = 1.286958464 # minimum from dimer dataset
+rcut = 7.0 # for dimer 
 # create bases 
 basis_bin = Dict()
 for (i,ord) in enumerate(orders)
@@ -29,29 +39,19 @@ for (i,ord) in enumerate(orders)
         pure = pureflag
     )
     basis_bin["b_order$(ord+1)"] = basis
-    println("basis_bin[\"b_order$(ord+1)\"] = ", basis_bin["b_order$(ord+1)"])
+    println("basis_bin[\"b_order$(ord+1)\"] created.")
 end
 
 
-## Data load ## 
-# traindir = "/leonardo_work/Sis25_degironc_0/apol/aceconverge2025/datasets/Tr124_dim.xyz"
-traindir = ARGS[1]
-train_data = read_extxyz(traindir);
-# valdir = "/leonardo_work/Sis25_degironc_0/apol/aceconverge2025/datasets/Val123_dim.xyz"
-valdir = ARGS[2]
-val_data = read_extxyz(valdir);
-println("train_data: ", length(train_data), " val_data: ", length(val_data))
 
 
 
-# println("Length of basis is: ", length(basis_vanilla))
-
-# println("\nAssigning offset")
-# Vref = OneBody(:C => -245.44385736) # one-body energy
-# println("Vref: ", Vref)
-# println("\nAssigning weights")
-# weights = Dict("shaiducarbon" => Dict("E" => 50.0, "F" => 1.0)) # loss weights
-# println("Weights: ", weights)
+println("\nAssigning offset")
+Vref = OneBody(:C => -245.44385736) # one-body energy
+println("Vref: ", Vref)
+println("\nAssigning weights")
+weights = Dict("shaiducarbon" => Dict("E" => 50.0, "F" => 1.0)) # loss weights
+println("Weights: ", weights)
 
 # # Basis precomputation 
 # datakeys = (energy_key = "energy", force_key = "force")
