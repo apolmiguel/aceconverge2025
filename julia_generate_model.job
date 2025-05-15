@@ -13,15 +13,17 @@
 #SBATCH --time 00:30:00
 
 # Variables
+traindir=datasets/Tr124_dim.xyz
+valdir=datasets/Val123_dim.xyz
 
-# Modules
+# Load modules
 . ~/bin/module_load_ace
 
 #Load environment
-source $PUBLIC/environments/ace/bin/activate
+# source $PUBLIC/environments/ace/bin/activate
 
 # Your commands here
 date
-julia generate_model.jl
+julia paircurves_dim.jl $traindir $valdir
 date
 
