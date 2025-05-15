@@ -1,3 +1,6 @@
+import Pkg
+Pkg.activate(".")
+
 using ACEpotentials, DelimitedFiles
 
 ## Functions ## 
@@ -17,8 +20,7 @@ traindir = ARGS[1]
 train_data = read_extxyz(traindir);
 valdir = ARGS[2]
 val_data = read_extxyz(valdir);
-potdir = ARGS[3]
-potential = load_potential(potdir, verbose = true)
+
 
 ## Assigning common solver properties from training ## 
 println("\nAssigning offset")
@@ -30,21 +32,25 @@ println("Weights: ", weights)
 datakeys = (energy_key = "energy", force_key = "force")
 train_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in train_data]
 
-
-
-
 ## Validation ## 
 val_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in val_data]
 
+prefix = "acejulia/" * traindir[10:end-4]
 for j in 3:4
+    # Load potential
+    potdir = prefix * "/border$(j)/potential.json"
+    println("Loading potential from $(potdir).")
+    pot = load_potential(potdir)
+
     # Error analysis
-    err = ACEpotentials.linear_errors(train_atoms, potential)
-    errdir = "datafiles/Tr124_dim_errors_b_order$(j).dat"
+    errdir = prefix * "/border$(j)/errors.dat"
+    err = ACEpotentials.linear_errors(train_atoms, pot)
     println("Writing errors to $(errdir).")
     writedlm(errdir, err)
 
     # Dimer curves
-    D = ACEpotentials.dimers(potential, [:C,]; rr = range(0.529177, 7.0, length=200))
-    dimerdir = "datafiles/Tr124_dim_dimcurve_b_order$(j).dat"
+    dimerdir = prefix * "/border$(j)/dimercurve.dat"
+    D = ACEpotentials.dimers(pot, [:C,]; rr = range(0.529177, 7.0, length=200))
     println("Writing dimer curves to $(dimerdir).")
     export_dimers_to_dat(D, filename=dimerdir)
+end

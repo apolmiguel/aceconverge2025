@@ -1,6 +1,5 @@
 import Pkg
 Pkg.activate(".")
-# Pkg.status()
 
 using ACEpotentials, DelimitedFiles
 
@@ -19,7 +18,7 @@ if length(ARGS) >= 3 && ARGS[3] == "purify"
 else
     pureflag = false # self-interacting CE
 end
-prefix = traindir[10:end-4] # for saving files 
+prefix = "acejulia/" * traindir[10:end-4] # for saving files 
 orders = [2,3]
 degrees = [[40,10], [40,10,9]] 
 r0 = 1.286958464 # minimum from dimer dataset
@@ -65,7 +64,7 @@ for j in 3:4 # body/correlation order = order + 1
     pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis_bin["border$j"], results["C"]))
 
     # Saving potential
-    potdir = "acejulia/" * prefix * "/border$(j)/potential.json"
+    potdir = prefix * "/border$(j)/potential.json"
     println("Saving potential to file $potdir")
     save_potential(potdir, pot)
 end

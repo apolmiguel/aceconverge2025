@@ -15,6 +15,7 @@
 # Variables
 traindir=datasets/Tr124_dim.xyz
 valdir=datasets/Val123_dim.xyz
+potdir=acejulia/Tr124_dim/border3/potential.json
 
 # Load modules
 . ~/bin/module_load_ace
@@ -24,6 +25,7 @@ valdir=datasets/Val123_dim.xyz
 
 # Your commands here
 date
-julia paircurves_dim.jl $traindir $valdir
+# julia trianmodel_dim.jl $traindir $valdir
+julia get_errs_dimcurves.jl $traindir $valdir
 date
 
