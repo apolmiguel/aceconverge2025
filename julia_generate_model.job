@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=acejl_calc
+#SBATCH --job-name=jl_flowtest
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB

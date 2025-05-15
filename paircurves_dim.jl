@@ -14,14 +14,15 @@ valdir = ARGS[2]
 val_data = read_extxyz(valdir);
 println("Training set has ", length(train_data), " entries.\nValidation set has ", length(val_data), " entries.")
 
+
 ## Variables ##
 if length(ARGS) >= 3 && ARGS[3] == "purify"
     pureflag = true # canonical CE
 else
     pureflag = false # self-interacting CE
 end
+prefix = traindir[10:end-4]
 
-# controlled
 orders = [2,3]
 degrees = [[40,10], [40,10,9]] # actual
 # degrees = [[5,5], [5,5,5]] # testing 
@@ -57,19 +58,21 @@ datakeys = (energy_key = "energy", force_key = "force")
 println("\nConstructing linear problem elements")
 train_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in train_data]
 
-for j in 3:4
+for j in 3:4 # body/correlation order = order + 1
     println("\nAssembling linear problem: A, Y, W for basis_bin[\"border$j\"]")
     A, Y, W = ACEfit.assemble(train_atoms, basis_bin["border$j"])
     println("Creating prior")
     P = smoothness_prior(basis_bin["border$j"]; p=2) # higher p, stronger regularization 
-
     println("Creating solver")
     solver = ACEfit.BLR()
     println("Solving linear problem")
     results = ACEfit.solve(solver, W .* A, W .* Y)
     pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis_bin["border$j"], results["C"]))
-    println("Saving potential to file acejulia/potentials/Tr124_dim_border$j.json")
-    save_potential("acejulia/potentials/Tr124_dim_border$j.json", pot)
+
+    # Saving potential
+    potdir = "acejulia/" * prefix * "/border$(j)/potential.json"
+    println("Saving potential to file $potdir")
+    save_potential(potdir, pot)
 end
 
     # println("Validating")
