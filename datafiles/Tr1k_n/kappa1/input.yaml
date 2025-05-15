@@ -1,0 +1,85 @@
+cutoff: 5 # cutoff for neighbour list construction 
+seed: 42  # random seed
+
+
+#################################################################
+## Metadata section
+##
+## This is arbitrary key (string)-value (string) pairs that would
+## be added to the potential YAML file:
+#################################################################
+metadata:
+  comment: Template
+## ==============================================================
+## end of metadata section
+## ==============================================================
+
+
+#################################################################
+## Potential definition section
+#################################################################
+potential:
+  deltaSplineBins: 0.001
+  elements: [ C ]  # list of all elements
+
+  # Embeddings are specified for each individual elements,
+  # all parameters could be distinct for different species
+  embeddings: # possible keywords: ALL, UNARY, elements: Al, Ni
+    ALL: {
+      npot: 'FinnisSinclairShiftedScaled',
+       fs_parameters: [ 1, 1 ], 
+      ndensity: 1,
+    }
+
+  # Bonds are specified for each possible pairs of elements
+  # One could use keywords: ALL (Al,Ni, AlNi, NiAl)
+  bonds: # possible keywords: ALL, UNARY, BINARY, elements pairs as AlAl, AlNi, NiAl, etc...
+    ALL: { # single species can choose all
+      radbase: ChebExpCos,
+      radparameters: [ 5.25 ],
+      rcut: 5,
+      dcut: 0.01,
+      NameOfCutoffFunction: cos,
+    }
+
+    
+
+  ## possible keywords: ALL, UNARY, BINARY, TERNARY, QUATERNARY, QUINARY,
+  ## element combinations as (Al,Al), (Al, Ni), (Al, Ni, Zn), etc...
+  ## Maybe this is the one in charge of the body order 
+  functions:
+    UNARY: {
+      nradmax_by_orders: [45,5,4],
+      lmax_by_orders: [0,2,2],
+    }
+
+#################################################################
+## Dataset specification section
+#################################################################
+data:
+  filename: ../../../datasets/Carbon_full/Tr1k_n.pckl.gzip 
+  test_filename: ../../../datasets/Carbon_full/Val1k_n.pckl.gzip
+
+#################################################################
+## Fit settings section
+#################################################################
+fit:
+  loss: { kappa: 0.35, L1_coeffs: 1e-8,  L2_coeffs: 1e-8, w0_rad: 1e-8, w1_rad: 1e-8, w2_rad: 1e-8 }
+
+## If `weighting` is not specified - uniform weighting would be used
+
+  ## scipy.minimze algorithm: BFGS /  L-BFGS-B / Nelder-Mead / etc...
+  optimizer: BFGS
+
+  ## maximum number of scipy.minimize iterations
+  maxiter: 1050
+
+
+#################################################################
+## Backend specification section
+#################################################################
+backend:
+  evaluator: tensorpot
+  gpu_config: {gpu_ind: 0, mem_limit: 0}
+  batch_size: 100
+  display_step: 50

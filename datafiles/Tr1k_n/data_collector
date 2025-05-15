@@ -1,0 +1,18 @@
+#!/bin/sh
+
+for run in */; do
+
+# training loss
+cd $run
+echo "Collecting data for $run"
+grep 'Iteration[^:]' log.txt | awk '{print $6,$10,$14,$19}' | sed 's/#//g' > trainloss.dat 
+
+# validation loss
+grep -A 1 'TEST STATS' log.txt | grep 'Iteration' | awk '{print $2, $(NF-1)}' | sed 's/#//g' | sed 's/Loss://g' > valloss_total.dat
+grep -A 12 'TEST STATS' log.txt | grep 'RMSE' | awk '{print $2,$4}' > valloss_ef.dat
+paste valloss_total.dat valloss_ef.dat > valloss.dat
+rm valloss_total.dat valloss_ef.dat
+
+cd ../
+
+done
