@@ -6,10 +6,8 @@ using ACEpotentials, DelimitedFiles
 
 
 ## Data load ## 
-# traindir = "/leonardo_work/Sis25_degironc_0/apol/aceconverge2025/datasets/Tr124_dim.xyz"
 traindir = ARGS[1]
 train_data = read_extxyz(traindir);
-# valdir = "/leonardo_work/Sis25_degironc_0/apol/aceconverge2025/datasets/Val123_dim.xyz"
 valdir = ARGS[2]
 val_data = read_extxyz(valdir);
 println("Training set has ", length(train_data), " entries.\nValidation set has ", length(val_data), " entries.")
@@ -21,14 +19,11 @@ if length(ARGS) >= 3 && ARGS[3] == "purify"
 else
     pureflag = false # self-interacting CE
 end
-prefix = traindir[10:end-4]
-
+prefix = traindir[10:end-4] # for saving files 
 orders = [2,3]
-degrees = [[40,10], [40,10,9]] # actual
-# degrees = [[5,5], [5,5,5]] # testing 
+degrees = [[40,10], [40,10,9]] 
 r0 = 1.286958464 # minimum from dimer dataset
 rcut = 7.0 # for dimer 
-
 
 ## Basis creation ## 
 println("\nCreating basis")
@@ -74,35 +69,3 @@ for j in 3:4 # body/correlation order = order + 1
     println("Saving potential to file $potdir")
     save_potential(potdir, pot)
 end
-
-    # println("Validating")
-    # val_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in val_data]
-    # err = ACEpotentials.linear_errors(train_atoms, pot)
-    # println("Saving errors to file datafiles/Tr124_dim_errors_border$j.dat")
-    # writedlm("datafiles/Tr124_dim_errors_border$j.dat", err)
-
-    # # println("Dimer curves")
-    # D = ACEpotentials.dimers(pot, [:C,]; rr = range(0.529177, 7.0, length=200))
-    # export_dimers_to_dat(D, filename="datafiles/Tr124_dim__dimcurve_border$j.dat")
-# # Potential 1
-# println("\nAssigning solver with prior")
-# solver = ACEfit.LSQR(damp = 1e-4, atol = 1e-6, P=P)
-# println("Solving linear problem")
-# results = ACEfit.solve(solver, W .* A, W .* Y)
-# pot_1 = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis_vanilla, results["C"]))
-
-# # # Potential 2
-# # # solver = ACEfit.LSQR(damp = 1e-4, atol = 1e-6, P=P)
-# # # results = ACEfit.solve(solver, W .* A, W .* Y)
-
-# # Errors and validation 
-# println("\nValidating")
-# val_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in val_data]
-# err1 = ACEpotentials.linear_errors(train_atoms, pot_1)
-# println("Saving errors to file datafiles/err1.dat")
-# writedlm("datafiles/err1.dat", err1)
-
-# # Dimers
-# D = ACEpotentials.dimers(pot_1, [:C,]; rr = range(0.529177, 7.0, length=200))
-# export_dimers_to_dat(D, filename="datafiles/dim1.dat")
-
