@@ -33,14 +33,15 @@ end
 println("pureflag = $pureflag")
 orders = [2,3,3,3,4]
 degrees = [[46,16],[46,16,12],[46,20,14],[46,24,16],[46,20,14,10]]
-r0 = 1.286958464 # minimum from dimer dataset
+labels  = ["46.16","46.16.12","46.20.14","46.24.16","46.20.14.10"]
+r0 = 1.286958464 # equilibrium length from dimer dataset
 println("r0 = $r0")
 
 
 ## Basis creation ## 
 println("\nCreating basis")
 basis_bin = Dict()
-for (i,ord) in enumerate(orders)
+for (i, ord) in enumerate(orders)
     println("i = $i, ord = $ord, degrees = $(degrees[i])\n")
     basis = ACE1x.ace_basis(
         elements = [:C],
@@ -50,8 +51,9 @@ for (i,ord) in enumerate(orders)
         r0 = r0,
         pure = pureflag
     )
-    basis_bin["border$(ord+1)"] = basis
-    println("basis_bin[\"border$(ord+1)\"] created.\n")
+    basis_bin["border$(labels[i])"] = basis
+    println("basis_bin[\"border$(labels[i])\"] created.\n")
+end
 end
 
 ## Assigning common solver properties ## 
