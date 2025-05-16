@@ -31,9 +31,10 @@ end
 
 # prefix = "acejulia/" * traindir[10:end-4] # for saving files 
 println("pureflag = $pureflag")
-orders = [2,3,4]
-degrees = [[40,10], [40,10,9], [40,10,9,8]] 
+# orders = [2,3,4]
+# degrees = [[40,10], [40,10,9], [40,10,9,8]] 
 r0 = 1.286958464 # minimum from dimer dataset
+println("r0 = $r0")
 
 
 ## Basis creation ## 
