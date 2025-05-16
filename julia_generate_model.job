@@ -16,6 +16,7 @@
 traindir=datasets/Tr1k_n.xyz
 valdir=datasets/Val1k_n.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
+pureflag=purify
 # Load modules
 . ~/bin/module_load_ace
 
@@ -24,7 +25,7 @@ rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 
 # Your commands here
 date
-julia trainmodel.jl $traindir $valdir $rcutflag
+julia trainmodel.jl $traindir $valdir $rcutflag $purifyflag
 julia get_errs_dimcurves.jl $traindir $valdir
 date
 
