@@ -22,14 +22,17 @@ println("rcut = $rcut")
 
 if length(ARGS) >= 4 && ARGS[4] == "purify"
     pureflag = true # canonical CE
-    prefix = "acejulia/" * traindir[10:end-4] * "_pure" # for saving files
+    prefix = "acejulia/" * traindir[10:end-4] * "_purify/" # for saving files
+
 else
     pureflag = false # self-interacting CE
-    prefix = "acejulia/" * traindir[10:end-4] # for saving files 
+    prefix = "acejulia/" * traindir[10:end-4] * "/" # for saving files
 end
 
-orders = [2,3]
-degrees = [[40,10], [40,10,9]] 
+# prefix = "acejulia/" * traindir[10:end-4] # for saving files 
+println("pureflag = $pureflag")
+orders = [2,3,4]
+degrees = [[40,10], [40,10,9], [40,10,9,8]] 
 r0 = 1.286958464 # minimum from dimer dataset
 
 
@@ -71,8 +74,14 @@ for j in 3:4 # body/correlation order = order + 1
     println("Solving linear problem")
     results = ACEfit.solve(solver, W .* A, W .* Y)
     pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis_bin["border$j"], results["C"]))
+
     # Saving potential
-    potdir = prefix * "/border$(j)/potential.json"
+    # if pureflag
+    #     potdir = prefix * "/border$(j)/potential_pure.json"
+    # else
+    #     potdir = prefix * "/border$(j)/potential.json"
+    # end
+    potdir = prefix * "border$(j)/potential.json"
     println("Saving potential to file $potdir")
     save_potential(potdir, pot)
 end

@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=jl_gen1k
+#SBATCH --job-name=jgenpure
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -25,7 +25,7 @@ pureflag=purify
 
 # Your commands here
 date
-julia trainmodel.jl $traindir $valdir $rcutflag $purifyflag
-julia get_errs_dimcurves.jl $traindir $valdir
+julia trainmodel.jl $traindir $valdir $rcutflag $pureflag
+julia extract_errs_dimcurves.jl $traindir $valdir $pureflag
 date
 

@@ -20,6 +20,7 @@ traindir = ARGS[1]
 train_data = read_extxyz(traindir);
 valdir = ARGS[2]
 val_data = read_extxyz(valdir);
+pureflag = ARGS[3]
 
 
 ## Assigning common solver properties from training ## 
@@ -37,19 +38,27 @@ val_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...
 
 prefix = "acejulia/" * traindir[10:end-4]
 for j in 3:4
+    # Directories dependent on purification 
+    if pureflag == "purify"
+        potdir = prefix * "/border$(j)/potential_pure.json"
+        errdir = prefix * "/border$(j)/errors_pure.dat"
+        dimerdir = prefix * "/border$(j)/dimercurve_pure.dat"
+    else
+        potdir = prefix * "/border$(j)/potential.json"
+        errdir = prefix * "/border$(j)/errors.dat"
+        dimerdir = prefix * "/border$(j)/dimercurve.dat"
+    end
+    
     # Load potential
-    potdir = prefix * "/border$(j)/potential_pure.json"
     println("Loading potential from $(potdir).")
     pot = load_potential(potdir)
 
     # Error analysis
-    errdir = prefix * "/border$(j)/errors_pure.dat"
     err = ACEpotentials.linear_errors(train_atoms, pot)
     println("Writing errors to $(errdir).")
     writedlm(errdir, err)
 
-    # Dimer curves
-    dimerdir = prefix * "/border$(j)/dimercurve_pure.dat"
+    # Dimer curves\
     D = ACEpotentials.dimers(pot, [:C,]; rr = range(0.529177, 7.0, length=200))
     println("Writing dimer curves to $(dimerdir).")
     export_dimers_to_dat(D, filename=dimerdir)
