@@ -36,18 +36,26 @@ train_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys.
 ## Validation ## 
 val_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in val_data]
 
-prefix = "acejulia/" * traindir[10:end-4]
-for j in 3:4
+# prefix = "acejulia/" * traindir[10:end-4]
+if length(ARGS) >= 3 && ARGS[3] == "purify"
+    pureflag = true # canonical CE
+    prefix = "acejulia/" * traindir[10:end-4] * "_purify/" # for saving files
+else
+    pureflag = false # self-interacting CE
+    prefix = "acejulia/" * traindir[10:end-4] * "/" # for saving files
+end
+
+for j in 3:5
     # Directories dependent on purification 
-    if pureflag == "purify"
-        potdir = prefix * "/border$(j)/potential_pure.json"
-        errdir = prefix * "/border$(j)/errors_pure.dat"
-        dimerdir = prefix * "/border$(j)/dimercurve_pure.dat"
-    else
-        potdir = prefix * "/border$(j)/potential.json"
-        errdir = prefix * "/border$(j)/errors.dat"
-        dimerdir = prefix * "/border$(j)/dimercurve.dat"
-    end
+    # if pureflag == "purify"
+    #     potdir = prefix * "border$(j)/potential_pure.json"
+    #     errdir = prefix * "border$(j)/errors_pure.dat"
+    #     dimerdir = prefix * "border$(j)/dimercurve_pure.dat"
+    # else
+    potdir = prefix * "border$(j)/potential.json"
+    errdir = prefix * "border$(j)/errors.dat"
+    dimerdir = prefix * "border$(j)/dimercurve.dat"
+    # end
     
     # Load potential
     println("Loading potential from $(potdir).")

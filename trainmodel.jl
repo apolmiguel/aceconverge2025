@@ -64,7 +64,7 @@ datakeys = (energy_key = "energy", force_key = "force")
 println("\nConstructing linear problem elements")
 train_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in train_data]
 
-for j in 3:4 # body/correlation order = order + 1
+for j in 3:5 # body/correlation order = order + 1
     println("\nAssembling linear problem: A, Y, W for basis_bin[\"border$j\"]")
     A, Y, W = ACEfit.assemble(train_atoms, basis_bin["border$j"])
     println("Creating prior")
