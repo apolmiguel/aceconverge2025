@@ -17,7 +17,7 @@ traindir=datasets/Tr1k_n.xyz
 # valdir=datasets/Val1k_n.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=purify
-ecost=50.0
+ecost=50
 dampvals=(1e-15 1e-8 5e-9 1e-8)
 
 # Load modules

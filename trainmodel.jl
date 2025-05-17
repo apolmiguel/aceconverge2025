@@ -4,7 +4,7 @@ using ACEpotentials, DelimitedFiles
 
 ## Explicit parsing ## 
 traindir = ARGS[1] # training data load
-println("Training dataset taken from $traindir")
+println("Training dataset taken from $traindir.")
 train_data = read_extxyz(traindir);
 if ARGS[2] == "dim" # rcut flag
     rcut = 7.0 
@@ -19,11 +19,11 @@ else
     pureflag = false # self-interacting CE
     prefix = "acejulia/" * traindir[10:end-4] * "/" 
 end
-println("Are we using the purification procedure: $pureflag")
+println("Are we using the purification procedure: $pureflag.")
 elossweight= parse(Float64, ARGS[4]) # energy weight
-println("(with Fcost = 1.0), Ecost = $elossweight")
+println("(with Fcost = 1.0), Ecost = $elossweight.")
 dampval = parse(Float64, ARGS[5]) # solver damping value
-println("Damping value for LSQR solver = $dampval")
+println("Damping value for LSQR solver = $dampval.")
 
 
 ## Control parameters ## 
@@ -34,10 +34,10 @@ r0 = 1.286958464 # equilibrium length from dimer dataset
 
 
 ## Common solver properties ## 
-println("\nAssigning offset")
+println("\nAssigning offset.")
 Vref = OneBody(:C => -245.44385736) # one-body energy
 println("Vref: ", Vref)
-println("Assigning weights")
+println("Assigning weights.")
 weights = Dict("shaiducarbon" => Dict("E" => elossweight, "F" => 1.0))
 println("Weights: ", weights)
 datakeys = (energy_key = "energy", force_key = "force")
@@ -48,7 +48,7 @@ train_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys.
 for (i, label) in enumerate(basis_tags)
     # Basis creation
     println("\nCreating basis for order $(orders[i]), with per-correlation degrees $(degrees[i]).")
-    println("r0 = $r0, rcut = $rcut")
+    println("r0 = $r0, rcut = $rcut.")
     basis = ACE1x.ace_basis(
         elements = [:C],
         order = orders[i],
@@ -59,50 +59,20 @@ for (i, label) in enumerate(basis_tags)
     println("Basis for $label created, with $(length(basis)) basis functions.")
 
     # Linear problem assembly
-    # println("\nAssembling linear problem: A, Y, W for basis_bin[\"$label\"]")
-    # A, Y, W = ACEfit.assemble(train_atoms, basis)
+    potdir = prefix * label * "/" * "ecost$(elossweight)/" * "damp$(dampval)/"
+    println("Creating directory: $potdir")
+    mkpath(potdir)
+
+    println("\nAssembling linear problem elements: A, Y, W for basis set: $label.")
+    A, Y, W = ACEfit.assemble(train_atoms, basis)
+    println("Creating prior.")
+    P = smoothness_prior(basis; p=2)
+    println("Creating solver.")
+    solver = ACEfit.LSQR(damp = dampval, atol = 1e-6, P = P)
+    println("Solving linear problem.")
+    results = ACEfit.solve(solver, W .* A, W .* Y)
+    println("Creating potential.")
+    pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis, results["C"]))
+    println("Saving potential at $potdir.")
+    save_potential(potdir * "potential.json", pot)
 end
-
-
-
-
-
-
-# for label in labels
-#     # Training 
-#     println("\nAssembling linear problem: A, Y, W for basis_bin[\"$label\"]")
-#     A, Y, W = ACEfit.assemble(train_atoms, basis_bin[label])
-#     println("Creating prior")
-#     P = smoothness_prior(basis_bin[label]; p=2) 
-#     println("Creating solver")
-#     solver = ACEfit.LSQR(damp = dampval, atol = 1e-6, P = P)
-#     println("Solving linear problem")
-#     results = ACEfit.solve(solver, W .* A, W .* Y)
-#     pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis_bin[label], results["C"]))
-
-#     # Saving potential
-#     potdir = prefix * 
-# end
-
-
-# for j in 3:5 
-#     println("\nAssembling linear problem: A, Y, W for basis_bin[\"border$j\"]")
-#     A, Y, W = ACEfit.assemble(train_atoms, basis_bin["border$j"])
-#     println("Creating prior")
-#     P = smoothness_prior(basis_bin["border$j"]; p=2) # higher p, stronger regularization 
-#     println("Creating solver")
-#     solver = ACEfit.BLR()
-#     println("Solving linear problem")
-#     results = ACEfit.solve(solver, W .* A, W .* Y)
-#     pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis_bin["border$j"], results["C"]))
-
-#     # Saving potential
-#     # if pureflag
-#     #     potdir = prefix * "/border$(j)/potential_pure.json"
-#     # else
-#     #     potdir = prefix * "/border$(j)/potential.json"
-#     # end
-#     potdir = prefix * "border$(j)/potential.json"
-#     println("Saving potential to file $potdir")
-#     save_potential(potdir, pot)
-# end
