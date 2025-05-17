@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -A Sis25_degironc_0
+#SBATCH -p boost_usr_prod
+#SBATCH --job-name=1e3pure
+#SBATCH --output=sbatch/jobouts/%x.%j.out
+#SBATCH --error=sbatch/joberrs/%x.%j.err
+#SBATCH --mem=100000MB
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:1
+#SBATCH --time 1-00:00:00
+
+# Variables
+traindir=datasets/Tr1k_n.xyz
+valdir=datasets/Val1k_n.xyz
+pureflag=purify # if pureflag=purify, use pure model
+
+# Load modules
+. ~/bin/module_load_ace
+
+# Your commands here
+date
+julia extract_errs_dimcurves.jl $traindir $valdir $pureflag
+date
+

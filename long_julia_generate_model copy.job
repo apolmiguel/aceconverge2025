@@ -1,0 +1,38 @@
+#!/bin/bash
+#SBATCH -A Sis25_degironc_0
+#SBATCH -p boost_usr_prod
+#SBATCH --qos=boost_qos_lprod
+#SBATCH --job-name=1e4si
+#SBATCH --output=sbatch/jobouts/%x.%j.out
+#SBATCH --error=sbatch/joberrs/%x.%j.err
+#SBATCH --mem=100000MB
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --gres=gpu:1
+#SBATCH --time 4-00:00:00
+
+# Variables
+traindir=datasets/Tr10k_n.xyz
+# valdir=datasets/Val1k_n.xyz
+rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
+pureflag=van # if pureflag=purify, use pure model
+ecost=50
+dampvals=(1e-15 1e-9 5e-9 1e-8)
+
+# Load modules
+. ~/bin/module_load_ace
+
+# Your commands here
+date
+
+for damp in "${dampvals[@]}"; do
+    dampval=$damp
+    echo "Running with dampval = $dampval"
+    # Run the Julia script with the current value of dampval
+    julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval
+done
+# julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval
+# julia extract_errs_dimcurves.jl $traindir $valdir $pureflag
+date
+

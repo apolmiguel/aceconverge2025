@@ -13,11 +13,14 @@
 #SBATCH --time 00:30:00
 
 # Variables
-gzipdir=/leonardo_work/Sis25_degironc_0/apol/codefiles_Convergence-of-body-orders-in-linear-ace/datasets/Carbon_full/Tr50k_n.pckl.gzip
-xyzdir=/leonardo_work/Sis25_degironc_0/apol/aceconverge2025/datasets/Tr50k_n.xyz
+gzipdir=/leonardo_work/Sis25_degironc_0/apol/codefiles_Convergence-of-body-orders-in-linear-ace/datasets/Tr1k_dia.pckl.gzip
+xyzdir=/leonardo_work/Sis25_degironc_0/apol/aceconverge2025/datasets/Tr1k_dia.xyz
 
 # Load modules
 . ~/bin/module_load_ace
+
+# Load environment
+source $PUBLIC/environments/ace/bin/activate
 
 # Your commands here
 date
