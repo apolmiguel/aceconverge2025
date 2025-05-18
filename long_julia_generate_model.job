@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_lprod
-#SBATCH --job-name=5e3pure
+#SBATCH --job-name=5e4pure
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -13,7 +13,7 @@
 #SBATCH --time 4-00:00:00
 
 # Variables
-traindir=datasets/Tr5k_n.xyz
+traindir=datasets/Tr50k_n.xyz
 # valdir=datasets/Val1k_n.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=purify # if pureflag=purify, use pure model
