@@ -25,9 +25,12 @@ elossweight = 50.0
 # dampval = parse(Float64, ARGS[5])
 dampval = [1e-15, 1e-9, 5e-9, 1e-8]
 ## Control parameters ## 
-orders = [2,3,3,3,4]
-degrees = [[46,16],[46,16,12],[46,20,14],[46,24,16],[46,20,14,10]]
-basis_tags  = ["46.16","46.16.12","46.20.14","46.24.16","46.20.14.10"]
+orders = [2,2,3,4]
+degrees = [[10,5], [40,10], [40,10,9], [40,10,9,8]]
+basis_tags  = ["10.5","40.10","40.10.9", "40.10.9.8"]
+# orders = [2,3,3,3,4]
+# degrees = [[46,16],[46,16,12],[46,20,14],[46,24,16],[46,20,14,10]]
+# basis_tags  = ["46.16","46.16.12","46.20.14","46.24.16","46.20.14.10"]
 
 ## Assigning common solver properties from training ## 
 println("\nAssigning offset")
