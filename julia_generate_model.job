@@ -13,12 +13,13 @@
 
 # Variables
 traindir=datasets/Tr1k_n.xyz
-# valdir=datasets/Val1k_n.xyz
+valdir=datasets/Val1k_n.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=purify # if pureflag=purify, use pure model
 ecost=50
 # dampvals=(1e-7 1e-5 1e-3)
 dampvals=(1e-15 1e-9 5e-9 1e-8)
+solverflag=BLR
 
 # Load modules
 . ~/bin/module_load_ace
@@ -30,7 +31,7 @@ for damp in "${dampvals[@]}"; do
     dampval=$damp
     echo "Running with dampval = $dampval"
     # Run the Julia script with the current value of dampval
-    julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval
+    julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval $solverflag
 done
 # julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval
 # julia extract_errs_dimcurves.jl $traindir $valdir $pureflag

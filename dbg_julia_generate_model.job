@@ -19,9 +19,10 @@ rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=van # if pureflag=purify, use pure model
 ecost=50
 solverflag=BLR
-# dampvals=(1e-15 1e-9 5e-9 1e-8)
-# dampvals=(1e-7 1e-5 1e-3)
-dampvals=(1e-15 1e-9 5e-9 1e-8 1e-7 1e-5 1e-3)
+dampvals=(1e-15 1e-9 5e-9 1e-8)
+# dampvals=(1e-15 1e-9 1e-7 1e-5)
+# dampvals=(1e-15 1e-9 5e-9 1e-8 1e-7 1e-5 1e-3)
+basisvals=(40.12 40.12.8 40.12.8.4)
 
 # Load modules
 . ~/bin/module_load_ace

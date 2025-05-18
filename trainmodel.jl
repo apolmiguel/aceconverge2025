@@ -29,13 +29,13 @@ println("Solver flag: $solverflag.")
 
 
 ## Control parameters ##
-orders = [2,2,3,4]
-degrees = [[10,5], [40,10], [40,10,9], [40,10,9,8]]
-basis_tags  = ["10.5","40.10","40.10.9", "40.10.9.8"]
+# orders = [2,2,3,4]
+# degrees = [[10,5], [40,10], [40,10,9], [40,10,9,8]]
+# basis_tags  = ["10.5","40.10","40.10.9", "40.10.9.8"]
 
-# orders = [2,3,3,3,4]
-# degrees = [[46,16],[46,16,12],[46,20,14],[46,24,16],[46,20,14,10]]
-# basis_tags  = ["46.16","46.16.12","46.20.14","46.24.16","46.20.14.10"]
+orders = [2,3,3,3,4]
+degrees = [[46,16],[46,16,12],[46,20,14],[46,24,16],[46,20,14,10]]
+basis_tags  = ["46.16","46.16.12","46.20.14","46.24.16","46.20.14.10"]
 r0 = 1.286958464 # equilibrium length from dimer dataset
 
 
@@ -83,8 +83,7 @@ for (i, label) in enumerate(basis_tags)
     results = ACEfit.solve(solver, W .* A, W .* Y)
     println("Creating potential.")
     pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis, results["C"]))
-    if solverflag == "BLR"
-        pot = ACEpotentials.BLRIP(pot, results["C"], results["Cerr"])
+    if length(ARGS) >= 6 && solverflag == "BLR"
         println("Saving potential at $potdir.")
         save_potential(potdir * "potential_BLR.json", pot)
     else
