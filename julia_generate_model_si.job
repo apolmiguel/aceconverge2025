@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
-#SBATCH --job-name=5e3si
+#SBATCH --job-name=dia1ksiblrmini2b
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -12,12 +12,14 @@
 #SBATCH --time 1-00:00:00
 
 # Variables
-traindir=datasets/Tr5k_n.xyz
-# valdir=datasets/Val1k_n.xyz
+traindir=datasets/Tr1k_dia.xyz
+valdir=datasets/Val1k_dia.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=van # if pureflag=purify, use pure model
 ecost=50
-dampvals=(1e-15 1e-9 5e-9 1e-8)
+# dampvals=(1e-7 1e-5 1e-3)
+dampvals=(1e-15 1e-9 5e-9 1e-8 1e-7 1e-5 1e-3)
+solverflag=BLR
 
 # Load modules
 . ~/bin/module_load_ace
@@ -28,10 +30,8 @@ date
 for damp in "${dampvals[@]}"; do
     dampval=$damp
     echo "Running with dampval = $dampval"
-    # Run the Julia script with the current value of dampval
-    julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval
+    julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval $solverflag
 done
-# julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval
-# julia extract_errs_dimcurves.jl $traindir $valdir $pureflag
+julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $solverflag
 date
 

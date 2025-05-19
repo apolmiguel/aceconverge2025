@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=diaextract
+#SBATCH --job-name=1kpextract
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -13,15 +13,16 @@
 #SBATCH --time 00:30:00
 
 # Variables
-traindir=datasets/Tr100_n.xyz
+traindir=datasets/Tr1k_n.xyz
 valdir=datasets/Val1k_n.xyz
-pureflag=van # if pureflag=purify, use pure model
+pureflag=purify # if pureflag=purify, use pure model
+solverflag=BLR
 
 # Load modules
 . ~/bin/module_load_ace
 
 # Your commands here
 date
-julia extract_errs_dimcurves.jl $traindir $valdir $pureflag
+julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $solverflag
 date
 

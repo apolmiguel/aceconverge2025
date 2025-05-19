@@ -25,9 +25,14 @@ elossweight = 50.0
 # dampval = parse(Float64, ARGS[5])
 dampval = [1e-15, 1e-9, 5e-9, 1e-8]
 ## Control parameters ## 
-orders = [2,2,3,4]
-degrees = [[10,5], [40,10], [40,10,9], [40,10,9,8]]
-basis_tags  = ["10.5","40.10","40.10.9", "40.10.9.8"]
+# orders = [2,3,4]
+# degrees = [[16,12], [16,12,8], [16,12,8,4]]
+# basis_tags  = ["16.12","16.12.8","16.12.8.4"]
+
+orders = [2,3,3]
+degrees = [[46,16],[46,16,12],[46,20,14]]
+basis_tags  = ["46.16","46.16.12","46.20.14"]
+
 # orders = [2,3,3,3,4]
 # degrees = [[46,16],[46,16,12],[46,20,14],[46,24,16],[46,20,14,10]]
 # basis_tags  = ["46.16","46.16.12","46.20.14","46.24.16","46.20.14.10"]
@@ -55,9 +60,16 @@ end
 for (i, label) in enumerate(basis_tags)
     for (j, damp) in enumerate(dampval)
         rundir = prefix * label * "/" * "ecost$(elossweight)/" * "damp$(damp)/"
-        potdir = rundir * "potential.json"
-        errdir = rundir * "errors.dat"
-        dimerdir = rundir * "dimercurve.dat"
+        
+        if ARGS[4] == "BLR"
+            potdir = rundir * "potential_BLR.json"
+            errdir = rundir * "errors_BLR.dat"
+            dimerdir = rundir * "dimercurve_BLR.dat"
+        else
+            potdir = rundir * "potential.json"
+            errdir = rundir * "errors.dat"
+            dimerdir = rundir * "dimercurve.dat"
+        end
         println("Loading potential from $(potdir).")
         pot = load_potential(potdir)
         err = ACEpotentials.linear_errors(train_atoms, pot)
