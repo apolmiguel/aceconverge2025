@@ -1,0 +1,6543 @@
+{
+"Versions": {
+"JuLIP": {
+"major": 0,
+"minor": 14,
+"patch": 8,
+"prerelease": [],
+"build": []
+},
+"ACEbase": {
+"major": 0,
+"minor": 4,
+"patch": 4,
+"prerelease": [],
+"build": []
+},
+"ACE1x": {
+"major": 0,
+"minor": 1,
+"patch": 11,
+"prerelease": [],
+"build": []
+},
+"ACE1": {
+"major": 0,
+"minor": 12,
+"patch": 5,
+"prerelease": [],
+"build": []
+},
+"ACEmd": {
+"major": 0,
+"minor": 1,
+"patch": 17,
+"prerelease": [],
+"build": []
+},
+"ACEpotentials": {
+"major": 0,
+"minor": 6,
+"patch": 7,
+"prerelease": [],
+"build": []
+},
+"ACEfit": {
+"major": 0,
+"minor": 1,
+"patch": 5,
+"prerelease": [],
+"build": []
+}
+},
+"IP": {
+"components": [
+{
+"E0": {
+"C": -245.44385736
+},
+"__id__": "JuLIP_OneBody"
+},
+{
+"T": {
+"T": "Float64",
+"__id__": "Type"
+},
+"basis": {
+"Pr": [
+{
+"envelope": {
+"rcut": 5.0,
+"T": {
+"T": "Float64",
+"__id__": "Type"
+},
+"r0": 1.286958464,
+"__id__": "ACE1_PolyEnvelope",
+"p": 2
+},
+"J": {
+"tl": 0.48994010375373215,
+"B": [
+0.0,
+-5.059510205085523,
+-5.656712860796714,
+-5.7605288167823385,
+-5.796440597062472,
+-5.813004423323828,
+-5.822000219887891,
+-5.827436339368394,
+-5.830981087470064,
+-5.833429762164003,
+-5.835200663723374,
+-5.836530889430262,
+-5.837562985015813,
+-5.8383868360675395,
+-5.8390614006191015,
+-5.839626653829031
+],
+"A": [
+0.9999999999999998,
+6.791561878680457,
+7.593208406895382,
+7.732564285328456,
+7.780769955059275,
+7.803004172689409,
+7.81507955282233,
+7.822376650828912,
+7.827134893247816,
+7.830421837048832,
+7.832798981680203,
+7.834584591321225,
+7.8359700102154966,
+7.837075895008679,
+7.837981387182273,
+7.838740146824391
+],
+"T": {
+"T": "Float64",
+"__id__": "Type"
+},
+"pl": 0,
+"tr": 1.0,
+"C": [
+0.0,
+0.0,
+-1.1180356658063453,
+-1.0183527003297173,
+-1.0062341117321738,
+-1.0028575857862938,
+-1.0015475296265202,
+-1.000933720246485,
+-1.0006082860275842,
+-1.0004199421429973,
+-1.0003035781061782,
+-1.0002279657175908,
+-1.0001768337399974,
+-1.0001411292783615,
+-1.0001155395438681,
+-1.0000968054916257
+],
+"pr": 0,
+"__id__": "ACE1_OrthPolyBasis"
+},
+"ru": 5.0,
+"trans": {
+"rin": 0.0,
+"r0": 1.286958464,
+"q": 3,
+"__id__": "ACE1_Agnesi2Transform",
+"p": 1,
+"a": 0.2857142857142857
+},
+"__id__": "ACE1_TransformedPolys",
+"rl": 0.0
+}
+],
+"zlist": {
+"list": [
+6
+],
+"__id__": "JuLIP_SZList"
+},
+"__id__": "ACE1_PolyPairBasis"
+},
+"coeffs": [
+-4.887424114223364,
+-1.878200831379438,
+0.9707193167360815,
+5.374738051331492,
+-0.17000910530874913,
+-0.025897261257942148,
+0.1876325264281001,
+-1.3852473042760804,
+0.5844211794055437,
+-5.5080380014337775,
+-2.64818273965314,
+-3.804921821436324,
+-1.9279968477299636,
+-2.6726139684472106,
+-0.8827054152242995,
+-0.54606336385994
+],
+"__id__": "ACE1_PolyPairPot",
+"committee": "nothing"
+},
+{
+"meta": {
+"ACE1_version": {
+"major": 0,
+"minor": 12,
+"patch": 5,
+"prerelease": [],
+"build": []
+}
+},
+"coeffs": [
+{
+"real": [
+-8.749320372954578,
+7.580374508787191,
+-2.2115866962197557,
+-0.5174162408428918,
+0.6519804392382943,
+-0.6589695121605189,
+0.556796959544928,
+-0.08084458410415418,
+-0.20311070717556495,
+0.14139273105329944,
+-0.03146409550993865,
+-0.00907070577715188,
+0.014148944339667988,
+-0.0060709157635680695,
+0.0005560384330518175,
+3.603204718675044,
+-3.714854343532206,
+2.364664738078181,
+-2.678751152598066,
+2.1774939812079253,
+-1.1936678038457194,
+0.7430730414213694,
+-0.7030932168384968,
+0.4254132881641273,
+-0.13505760493058747,
+0.047856232269830594,
+-7.171800977638775,
+4.552833446298408,
+-2.0788516878169467,
+0.10877177657708036,
+0.12260425358223967,
+-0.10902051867543466,
+0.07077172791642976,
+0.005876796458794029,
+3.5859004888193886,
+-4.552833446298409,
+2.078851687816947,
+-0.10877177657708038,
+-0.12260425358223968,
+0.10902051867543469,
+-0.07077172791642977,
+-0.00587679645879403,
+4.552833446298409,
+-2.078851687816947,
+0.10877177657708038,
+0.12260425358223968,
+-0.10902051867543469,
+0.07077172791642977,
+0.00587679645879403,
+2.206333992509385,
+-1.0440529718594131,
+0.1719293733348837,
+0.18311613314190994,
+-0.048153110254648905,
+-2.2063339925093857,
+1.0440529718594138,
+-0.1719293733348838,
+-0.18311613314191005,
+0.04815311025464893,
+1.1031669962546928,
+-1.0440529718594138,
+0.1719293733348838,
+0.18311613314191005,
+-0.04815311025464893,
+1.0440529718594138,
+-0.1719293733348838,
+-0.18311613314191005,
+0.04815311025464893,
+-1.0440529718594138,
+0.1719293733348838,
+0.18311613314191005,
+-0.04815311025464893,
+-0.43311353006417697,
+0.07946122604945503,
+0.43311353006417697,
+-0.07946122604945503,
+-0.43311353006417697,
+0.07946122604945503,
+0.21655676503208848,
+-0.07946122604945503,
+0.07946122604945503,
+-0.07946122604945503,
+0.07946122604945503,
+0.6132996384238835,
+-0.8979453988888912,
+0.5993439903721912,
+0.3508721651111184,
+-0.8931657833499779,
+0.6323314039825315,
+-0.1952317696853231,
+0.011884556709284679,
+-0.01491507851340797,
+-1.8824428448358381,
+1.3355094903296916,
+-0.2134150600472851,
+-0.07509521975446944,
+0.12778780706884124,
+-0.039925757417497515,
+0.9412214224179192,
+-1.3355094903296918,
+0.21341506004728514,
+0.07509521975446945,
+-0.12778780706884127,
+0.03992575741749752,
+1.3355094903296918,
+-0.21341506004728514,
+-0.07509521975446945,
+0.12778780706884127,
+-0.03992575741749752,
+0.3852873002719469,
+-0.21411421645270368,
+-0.05375862027204843,
+-0.385287300271947,
+0.2141142164527038,
+0.05375862027204847,
+0.1926436501359735,
+-0.2141142164527038,
+-0.05375862027204847,
+0.2141142164527038,
+0.05375862027204847,
+-0.2141142164527038,
+-0.05375862027204847,
+0.34646083288353025,
+-0.4961704971840021,
+-0.2755704714480218,
+0.5576415238179406,
+-0.3992096399092103,
+0.14698483661100223,
+-0.023479191188123538,
+-1.1802025663853168,
+0.33702849715991223,
+-0.05292758151306222,
+-0.029697431654918446,
+0.5901012831926585,
+-0.3370284971599123,
+0.052927581513062226,
+0.029697431654918453,
+0.3370284971599123,
+-0.052927581513062226,
+-0.029697431654918453,
+0.1890998232810068,
+-0.18909982328100686,
+0.09454991164050343,
+0.427036692298087,
+-0.2728488823314778,
+0.01692328521269666,
+0.0177420580282499,
+0.012937180783371194,
+-0.07939736719087905,
+0.016539260613934775,
+0.03969868359543953,
+-0.016539260613934778,
+0.016539260613934778,
+0.018519037663570954,
+0.011327185045068877,
+-0.01845174816906494,
+0.0065451504531840714,
+-0.5794134183510682,
+0.9907778410676932,
+-0.44482120421626253,
+0.4031909854792453,
+-0.1482751767768567,
+0.027859693026613626,
+0.7382412281792374,
+-0.21962972033098419,
+0.08640216112720418,
+-0.3691206140896186,
+0.2196297203309841,
+-0.08640216112720416,
+-0.2196297203309841,
+0.08640216112720416,
+-0.6759939799186232,
+0.5637881243619186,
+-0.3552812414587717,
+0.06438728709915235,
+-0.01742656289826582,
+0.008713281449132908,
+-0.032343388918576486,
+-0.0028690398564546523,
+-0.248116140185273,
+-0.04045813194768228,
+0.007913469851115993,
+0.12405807009263652,
+0.020229065973841144,
+-0.007913469851115993,
+0.007913469851115993,
+0.22499078579780998,
+-0.2522195352918122,
+0.0829879608202956,
+0.04139469259446515
+],
+"T": {
+"T": "Float64",
+"__id__": "Type"
+},
+"size": [
+190
+],
+"__id__": "ACE_ArrayOfNumber"
+}
+],
+"__id__": "ACE1_PIPotential",
+"pibasis": {
+"basis1p": {
+"spec": [
+{
+"nlmz": [
+1,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+2,
+-2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+2,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+2,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+2,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+2,
+2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+-3,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+-2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+3,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+-2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+-3,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+-2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+3,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+-2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+-2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+-2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+2,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+1,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+1,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+1,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+1,
+-1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+1,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+1,
+1,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+9,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+10,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+11,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+12,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+13,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+14,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+15,
+0,
+0,
+0
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"J": {
+"envelope": {
+"__id__": "ACE1_OneEnvelope"
+},
+"J": {
+"tl": -1.0,
+"B": [
+0.0,
+-2.0786140873094945e-18,
+-7.017609472481619e-18,
+2.412551411320251e-17,
+-4.62164749360015e-17,
+8.442290037528487e-17,
+-1.036773538695508e-16,
+1.0425048391689846e-16,
+-1.0935396246574519e-16,
+1.1420171246516114e-16,
+-1.2236837934382784e-16,
+1.182192736628651e-16,
+-8.383224079690349e-17,
+1.6979098049736654e-16,
+-1.221008501891897e-16,
+2.2883885653832353e-16,
+-2.753954957631153e-16,
+2.490864486696935e-16,
+-3.011360817815889e-16,
+1.9856740318865658e-16,
+-2.592931134744672e-16,
+2.3664166166660827e-16,
+-2.959961914097984e-16,
+3.1192203016778236e-16
+],
+"A": [
+1.5687375497513916,
+3.316624790355401,
+2.6739483914241924,
+2.430862174022013,
+2.3048861143233235,
+2.2291771507065796,
+2.179449471771357,
+2.1447610589554333,
+2.11947811973324,
+2.1004201260569073,
+2.0856653614930205,
+2.0739902138057946,
+2.064582282328315,
+2.0568833782436915,
+2.0504988310623005,
+2.0451427085842933
+],
+"T": {
+"T": "Float64",
+"__id__": "Type"
+},
+"pl": 2,
+"tr": 1.0,
+"C": [
+0.0,
+0.0,
+-0.8062257748298566,
+-0.9090909090909166,
+-0.9481763873554975,
+-0.9671528397232887,
+-0.9776923610941106,
+-0.9840838646340674,
+-0.9882117688044432,
+-0.9910081668223438,
+-0.9929753269925167,
+-0.9944021951446381,
+-0.9954638496291572,
+-0.9962709628235593,
+-0.9968960091520394,
+-0.9973878929376258,
+-0.9977804762744835,
+-0.998097738570837,
+-0.998356999795269,
+-0.9985709912230949,
+-0.9987492190052062,
+-0.998898881989018,
+-0.9990255017705761,
+-0.9991333629368506
+],
+"pr": 2,
+"__id__": "ACE1_OrthPolyBasis"
+},
+"ru": 5.0,
+"trans": {
+"transforms": [
+{
+"xy": [
+1.0,
+0.08410775261128545,
+-1.0,
+1.0
+],
+"t": {
+"rin": 0.0,
+"r0": 1.286958464,
+"q": 4,
+"__id__": "ACE1_Agnesi2Transform",
+"p": 2,
+"a": 0.7692307692307693
+},
+"__id__": "ACE1_AffineT"
+}
+],
+"zlist": {
+"list": [
+6
+],
+"__id__": "JuLIP_SZList"
+},
+"__id__": "ACE1_MultiTransform"
+},
+"__id__": "ACE1_TransformedPolys",
+"rl": 0.0
+},
+"zlist": {
+"list": [
+6
+],
+"__id__": "JuLIP_SZList"
+},
+"SH": {
+"T": {
+"T": "Float64",
+"__id__": "Type"
+},
+"maxL": 3,
+"__id__": "ACE1_SHBasis"
+},
+"__id__": "ACE1_BasicPSH1pBasis"
+},
+"inner": [
+[
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+6,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+13,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+3,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+-3,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+11,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+9,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+11,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+12,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+6,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+10,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+10,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+-3,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+3,
+3,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+10,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+9,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+9,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+8,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+8,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+-3,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+3,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+7,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+14,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+15,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+3,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+3,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+9,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+6,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+2,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+4,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+5,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+2,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+2,
+2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+4,
+2,
+-2,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+-1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+1,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+7,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+},
+{
+"oneps": [
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+1,
+1,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+},
+{
+"nlmz": [
+3,
+0,
+0,
+6
+],
+"__id__": "ACE1_PSH1pBasisFcn"
+}
+],
+"z0": {
+"z": 6,
+"__id__": "JuLIP_AtomicNumber"
+},
+"__id__": "ACE1_PIBasisFcn"
+}
+]
+],
+"__id__": "ACE1_PIBasis"
+},
+"committee": "nothing"
+}
+],
+"__id__": "JuLIP_SumIP"
+}
+}

@@ -13,7 +13,7 @@
 #SBATCH --time 00:30:00
 
 # Variables
-traindir=datasets/Tr100_n.xyz
+traindir=datasets/Tr1k_n.xyz
 valdir=datasets/Val1k_n.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=purify # if pureflag=purify, use pure model
