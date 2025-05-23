@@ -18,7 +18,6 @@ rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=van # if pureflag=purify, use pure model
 ecost=(1 5 10 50 100)
 priorval=5
-solverflag=BLR
 
 # Load modules
 . ~/bin/module_load_ace
@@ -26,11 +25,10 @@ solverflag=BLR
 # Your commands here
 date
 
-for damp in "${dampvals[@]}"; do
-    dampval=$damp
-    echo "Running with dampval = $dampval"
-    julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $priorval $solverflag
+for ecostval in "${ecost[@]}"; do
+    echo "Running with ecostval = $ecostval"
+    julia trainmodel.jl $traindir $rcutflag $pureflag $ecostval $priorval 
 done
-julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $solverflag
+julia extract_errs_dimcurves.jl $traindir $valdir $pureflag 
 date
 
