@@ -16,9 +16,8 @@ traindir=datasets/Tr1k_dia.xyz
 valdir=datasets/Val1k_dia.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=purify # if pureflag=purify, use pure model
-ecost=50
-# dampvals=(1e-7 1e-5 1e-3)
-dampvals=(1e-15 1e-9 5e-9 1e-8 1e-7 1e-5 1e-3)
+ecost=(1 5 10 50 100)
+priorval=5
 solverflag=BLR
 
 # Load modules

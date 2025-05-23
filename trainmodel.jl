@@ -22,16 +22,21 @@ end
 println("Are we using the purification procedure: $pureflag.")
 elossweight= parse(Float64, ARGS[4]) # energy weight
 println("(with Fcost = 1.0), Ecost = $elossweight.")
-dampval = parse(Float64, ARGS[5]) # solver damping value
-println("Damping value for LSQR solver = $dampval.")
+# dampval = parse(Float64, ARGS[5]) # solver damping value
+# println("Damping value for LSQR solver = $dampval.")
+priorval = parse(Int64, ARGS[5]) # degree of smoothness prior 
+println("Degree of smoothness prior = $priorval.")
 solverflag = ARGS[6]
 println("Solver flag: $solverflag.")
 
 
 ## Control parameters ##
+# orders = [2,3,4]
+# degrees = [[16,12],[16,12,8],[16,12,8,4]]
+# basis_tags = ["16.12","16.12.8","16.12.8.4"]
 orders = [2,3,4]
-degrees = [[16,12],[16,12,8],[16,12,8,4]]
-basis_tags = ["16.12","16.12.8","16.12.8.4"]
+degrees = [[24,20],[24,20,16],[24,20,16,12]]
+basis_tags = ["24.20","24.20.16","24.20.16.12"]
 
 # orders = [2,3,3,3,4]
 # degrees = [[46,16],[46,16,12],[46,20,14],[46,24,16],[46,20,14,10]]
