@@ -22,14 +22,13 @@ end
 println("Are we using the purification procedure: $pureflag.")
 elossweight= parse(Float64, ARGS[4]) 
 println("(with Fcost = 1.0), Ecost = $elossweight.")
-priorval = parse(Int64, ARGS[5]) # degree of smoothness prior 
-println("Degree of smoothness prior = $priorval.")
+
 
 
 ## Control parameters ##
 orders = [2,3,4]
-degrees = [[26,22],[26,22,18],[26,22,18,14]]
-basis_tags = ["26.22","26.22.18","26.22.18.14"]
+degrees = [[24,20],[24,20,16],[24,20,16,12]]
+basis_tags = ["24.20","24.20.16","24.20.16.12"]
 r0 = 1.286958464 # equilibrium length from dimer dataset
 
 ## Common solver properties ## 
@@ -57,32 +56,17 @@ for (i, label) in enumerate(basis_tags)
     println("Basis for $label created, with $(length(basis)) basis functions.")
 
     # Linear problem assembly
-    potdir = prefix * label * "/" * "ecost$(elossweight)/" * "prior$(priorval)/"
+    potdir = prefix * label * "/" * "ecost$(elossweight)/"
     println("Creating directory: $potdir")
     mkpath(potdir)
 
     println("\nAssembling linear problem elements: A, Y, W for basis set: $label.")
     A, Y, W = ACEfit.assemble(train_atoms, basis)
-    println("Creating priors and modifying A.")
-    P = smoothness_prior(basis; p=priorval)
-    Ap = Diagonal(W) * (A/P)
-    
-
-
-    # if length(ARGS) >= 6 && solverflag == "BLR"
-    #     solver = ACEfit.BLR()
-    # else
-    #     solver = ACEfit.LSQR(damp = dampval, atol = 1e-6, P = P)
-    # end
-    # println("Solving linear problem.")
-    # results = ACEfit.solve(solver, W .* A, W .* Y)
+    solver = ACEfit.BLR()
+    println("Solving linear problem.")
+    results = ACEfit.solve(solver, W .* A, W .* Y)
     # println("Creating potential.")
-    # pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis, results["C"]))
-    # if length(ARGS) >= 6 && solverflag == "BLR"
-    #     println("Saving potential at $potdir.\n\n")
-    #     save_potential(potdir * "potential_BLR.json", pot)
-    # else
-    #     println("Saving potential at $potdir.\n\n")
-    #     save_potential(potdir * "potential.json", pot)
-    # end
+    pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis, results["C"]))
+    println("Saving potential to $potdir.")
+    save_potential(potdir * "potential.json", pot)
 end
