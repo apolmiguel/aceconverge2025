@@ -33,13 +33,16 @@ r0 = 1.286958464 # equilibrium length from dimer dataset
 
 ## Common solver properties ## 
 println("\nAssigning offset.")
-Vref = OneBody(:C => -245.44385736) # one-body energy
-println("Vref: ", Vref)
+# Vref = OneBody(:C => -245.44385736)
+Vref = OneBody(:Si => -7881.32677981122) 
+# println("Vref: ", Vref)
 println("Assigning weights.")
-weights = Dict("shaiducarbon" => Dict("E" => elossweight, "F" => 1.0))
+# weights = Dict("shaiducarbon" => Dict("E" => elossweight, "F" => 1.0))
+weights = Dict("default" => Dict("E" => elossweight, "F" => 1.0))
 println("Weights: ", weights)
 datakeys = (energy_key = "energy", force_key = "force")
 train_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in train_data]
+# train_atoms = [ACEpotentials.AtomsData(t; weights=weights, datakeys...) for t in train_data]
 # basis_bin = Dict()
 
 
@@ -47,7 +50,8 @@ for (i, label) in enumerate(basis_tags)
     println("\nCreating basis for order $(orders[i]), with per-correlation degrees $(degrees[i]).")
     println("r0 = $r0, rcut = $rcut.")
     basis = ACE1x.ace_basis(
-        elements = [:C],
+        # elements = [:C],
+        elements = [:Si],
         order = orders[i],
         totaldegree = degrees[i],
         rcut = rcut,
@@ -67,6 +71,7 @@ for (i, label) in enumerate(basis_tags)
     results = ACEfit.solve(solver, W .* A, W .* Y)
     # println("Creating potential.")
     pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis, results["C"]))
+    # pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis, results["Si"]))
     println("Saving potential to $potdir.")
     save_potential(potdir * "potential.json", pot)
 end
