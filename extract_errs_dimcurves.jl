@@ -23,8 +23,8 @@ pureflag = ARGS[3]
 elossweight = parse(Float64, ARGS[4]) 
 
 orders = [2,3,4]
-degrees = [[24,20],[24,20,16],[24,20,16,12]]
-basis_tags = ["24.20","24.20.16","24.20.16.12"]
+degrees = [[224,20],[224,20,16],[224,20,16,12]]
+basis_tags = ["224.20","224.20.16","224.20.16.12"]
 
 # orders = [2,3,3,3,4]
 # degrees = [[46,16],[46,16,12],[46,20,14],[46,24,16],[46,20,14,10]]
@@ -32,8 +32,8 @@ basis_tags = ["24.20","24.20.16","24.20.16.12"]
 
 ## Assigning common solver properties from training ## 
 println("\nAssigning offset")
-# Vref = OneBody(:C => -245.44385736) # one-body energy
-Vref = OneBody(:Si => -7881.32677981122) 
+Vref = OneBody(:C => -245.44385736) # one-body energy
+# Vref = OneBody(:Si => -7881.32677981122) 
 println("Vref: ", Vref)
 println("\nAssigning weights")
 # weights = Dict("shaiducarbon" => Dict("E" => elossweight, "F" => 1.0)) # loss weights

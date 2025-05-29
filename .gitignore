@@ -5,3 +5,4 @@ scratch.jl
 datasets/Tr10k_n.xyz
 datasets/Tr50k_n.xyz
 *.dat
+example2gzip.py
