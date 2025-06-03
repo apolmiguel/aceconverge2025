@@ -82,7 +82,7 @@ filedir = sys.argv[1]
 dset = load_gzip(filedir)
 rcut = float(sys.argv[2])
 
-for ind,struc in enumerate(dset):
+for ind,struc in enumerate(dset['ase_atoms']):
 
     lvecs = dset['ase_atoms'][ind].get_cell()
     pos = dset['ase_atoms'][ind].get_positions()

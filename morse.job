@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=morse
+#SBATCH --job-name=morse_relabel
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -20,6 +20,7 @@
 
 # Your commands here
 date
-python3 morse_relabel.py
+python3 morse_relabel.py datasets/Tr1k_n.pckl.gzip 5.0
+python3 morse_relabel.py datasets/Val1k_n.pckl.gzip 5.0
 date
 
