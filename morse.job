@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
-#SBATCH --job-name=pmaker_l1
+#SBATCH --qos=boost_qos_dbg
+#SBATCH --job-name=morse
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -9,24 +10,16 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:1
-#SBATCH --time 1-00:00:00
+#SBATCH --time 00:30:00
 
 # Variables
-maindir=pacemaker/Tr1k_n/border_L1
-subfolders=(b_order2 b_order3 b_order4)
+
 
 # Load modules
 . ~/bin/module_load_ace
 
 # Your commands here
 date
-cd $maindir
-for test in "${subfolders[@]}"; do
-    echo "Running test in $test"
-    cd $test
-    pacemaker input.yaml
-    cd ../
-done
-
+python3 morse_relabel.py
 date
 

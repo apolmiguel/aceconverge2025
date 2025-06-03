@@ -1,0 +1,6 @@
+2025-05-29 18:57:15,210 I - Start pacemaker
+2025-05-29 18:57:15,211 I - Hostname: lrdn3379.leonardo.local
+2025-05-29 18:57:15,211 I - Username: atan0000
+2025-05-29 18:57:15,211 I - pacemaker/pyace version: 0.3.0
+2025-05-29 18:57:15,211 I - ace_evaluator   version: 2023.11.25
+2025-05-29 18:57:15,211 I - Loading input.yaml... 

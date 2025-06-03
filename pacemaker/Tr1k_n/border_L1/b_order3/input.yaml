@@ -60,8 +60,8 @@ potential:
 #################################################################
 data:
 ### Option 1: pandas dataframe in pckl.gzip
-  filename: ../C1kex.pckl.gzip # force to read reference pickled dataframe from given file
-  test_filename: ../Val1k_n.pckl.gzip # Explicit validation set
+  filename: ../../../../datasets/Tr1k_n.pckl.gzip # tset
+  test_filename: ../../../../datasets/Val1k_n.pckl.gzip #vset
 
 #################################################################
 ## Fit settings section
@@ -75,12 +75,8 @@ fit:
   optimizer: BFGS
 
   ## maximum number of scipy.minimize iterations
-  maxiter: 1000
+  maxiter: 1500
 
-  #  see Ladder scheme fitting for more info
-  ladder_step: 10
-
-  ladder_type: body_order
 
 #################################################################
 ## Backend specification section
