@@ -1,0 +1,62 @@
+metadata:
+  _loss: 0.0866755806335706
+  ace_evaluator_version: 2023.11.25
+  intermediate_time: 2024-09-10 21:39:04.831884
+  pacemaker_version: 0.3.0
+  reference_energy: "{\"C\": -253.62804846011176, \"shift\": -0.49552315738716857}"
+  starttime: 2024-09-10 21:33:33.983161
+  tensorpot_version: 0+untagged.18.g8776209
+  user: atan0000
+global:
+  DeltaSplineBins: 0.001
+species:
+  - speciesblock: C
+    ndensityi: 1
+    npoti: FinnisSinclairShiftedScaled
+    parameters: [1, 1]
+    rho_core_cut: 100000
+    drho_core_cut: 250
+    nradmaxi: 0
+    lmaxi: 0
+    rcutij: 5
+    dcutij: 0.01
+    NameOfCutoffFunctionij: cos
+    r_in: 0
+    delta_in: 0
+    inner_cutoff_type: distance
+    nradbaseij: 30
+    radbase: ChebExpCos
+    radparameters: [5.25]
+    radcoefficients: []
+    core-repulsion: [0, 0]
+    nbody:
+      - {type: C C, nr: [1], nl: [0], c: [-1.9835270952415252]}
+      - {type: C C, nr: [2], nl: [0], c: [5.105284344985769]}
+      - {type: C C, nr: [3], nl: [0], c: [11.126901973119596]}
+      - {type: C C, nr: [4], nl: [0], c: [3.6121199985538173]}
+      - {type: C C, nr: [5], nl: [0], c: [-8.4750318963486784]}
+      - {type: C C, nr: [6], nl: [0], c: [-7.6709488819802196]}
+      - {type: C C, nr: [7], nl: [0], c: [5.5050024864724953]}
+      - {type: C C, nr: [8], nl: [0], c: [10.982436406226073]}
+      - {type: C C, nr: [9], nl: [0], c: [-0.8090395296649926]}
+      - {type: C C, nr: [10], nl: [0], c: [-12.072805881641335]}
+      - {type: C C, nr: [11], nl: [0], c: [-3.8327823099884903]}
+      - {type: C C, nr: [12], nl: [0], c: [12.201110987856636]}
+      - {type: C C, nr: [13], nl: [0], c: [8.6893790886711866]}
+      - {type: C C, nr: [14], nl: [0], c: [-9.6237546450451781]}
+      - {type: C C, nr: [15], nl: [0], c: [-12.697441332252282]}
+      - {type: C C, nr: [16], nl: [0], c: [6.7982390315014012]}
+      - {type: C C, nr: [17], nl: [0], c: [17.235446141325504]}
+      - {type: C C, nr: [18], nl: [0], c: [-2.4716641244839921]}
+      - {type: C C, nr: [19], nl: [0], c: [-20.649248855364775]}
+      - {type: C C, nr: [20], nl: [0], c: [-1.3802492433904283]}
+      - {type: C C, nr: [21], nl: [0], c: [24.295019863069015]}
+      - {type: C C, nr: [22], nl: [0], c: [5.2405970831807416]}
+      - {type: C C, nr: [23], nl: [0], c: [-29.370304652547375]}
+      - {type: C C, nr: [24], nl: [0], c: [-5.533744934792983]}
+      - {type: C C, nr: [25], nl: [0], c: [38.891793376080464]}
+      - {type: C C, nr: [26], nl: [0], c: [-5.0920391175473672]}
+      - {type: C C, nr: [27], nl: [0], c: [-51.701764914561359]}
+      - {type: C C, nr: [28], nl: [0], c: [62.516455075577134]}
+      - {type: C C, nr: [29], nl: [0], c: [-32.976661830564204]}
+      - {type: C C, nr: [30], nl: [0], c: [7.4168117134535576]}

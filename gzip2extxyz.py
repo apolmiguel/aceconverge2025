@@ -17,7 +17,6 @@ def gzip2extxyz(gzipfile, outname, verbose=False):
     
     Parameters:
     gzipfile (str): Path to the input gzip file.
-    outdir (str): Directory where the output extxyz file will be saved.
     outname (str): Name of the output extxyz file (without extension).
     
     Returns:

@@ -26,9 +26,12 @@ println("(with Fcost = 1.0), Ecost = $elossweight.")
 
 
 ## Control parameters ##
-orders = [2,3,4]
-degrees = [[224,20],[224,20,16],[224,20,16,12]]
-basis_tags = ["224.20","224.20.16","224.20.16.12"]
+# orders = [2,3,4]
+# degrees = [[24,20],[24,20,16],[24,20,16,12]]
+# basis_tags = ["24.20","24.20.16","24.20.16.12"]
+orders = [2,3]
+degrees = [[24,20],[24,20,16]]
+basis_tags = ["24.20","24.20.16"]
 r0 = 1.286958464 # equilibrium length from dimer dataset
 
 ## Common solver properties ## 

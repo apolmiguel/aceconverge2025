@@ -7,3 +7,6 @@ datasets/Tr50k_n.xyz
 *.dat
 example2gzip.py
 morse.ipynb
+examples2clusters.py
+*RRQR*
+*report*

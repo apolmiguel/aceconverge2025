@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
-#SBATCH --job-name=big2b_1ksi
+#SBATCH --job-name=morse_si
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -12,9 +12,9 @@
 #SBATCH --time 1-00:00:00
 
 # Variables
-traindir=datasets/Tr1k_n.xyz
+traindir=datasets/Tr1k_n_morse.xyz
 # traindirs=(datasets/Si2.xyz datasets/Si3.xyz datasets/Si4.xyz datasets/Si5.xyz)
-valdir=datasets/Val1k_n.xyz
+valdir=datasets/Val1k_n_morse.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=van # if pureflag=purify, use pure model
 ecost=(10 30 50)

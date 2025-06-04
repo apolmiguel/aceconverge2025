@@ -1,0 +1,42 @@
+2025-06-03 17:37:22,773 I - Start pacemaker
+2025-06-03 17:37:22,774 I - Hostname: lrdn0791.leonardo.local
+2025-06-03 17:37:22,774 I - Username: atan0000
+2025-06-03 17:37:22,774 I - pacemaker/pyace version: 0.3.0
+2025-06-03 17:37:22,774 I - ace_evaluator   version: 2023.11.25
+2025-06-03 17:37:22,774 I - Loading input.yaml... 
+2025-06-03 17:37:22,787 I - Set numpy random seed to 42
+2025-06-03 17:37:22,844 I - Target potential shape constructed from dictionary, it contains 100 functions
+2025-06-03 17:37:30,671 I - tensorpot_version: 0+untagged.18.g8776209
+2025-06-03 17:37:30,672 I - User name automatically identified: atan0000
+2025-06-03 17:37:30,672 I - Search for dataset file(s): ['../../../../datasets/Tr1k_dia.pckl.gzip']
+2025-06-03 17:37:30,673 I - #1/1: try to load ../../../../datasets/Tr1k_dia.pckl.gzip
+2025-06-03 17:37:30,673 I - Loading dataframe from pickle file ../../../../datasets/Tr1k_dia.pckl.gzip (908.1KiB)
+2025-06-03 17:37:30,709 I -  1000 structures found
+2025-06-03 17:37:30,735 I - Processing structures dataframe. Shape: (1000, 6)
+2025-06-03 17:37:30,735 I - Total number of atoms: 17832
+2025-06-03 17:37:30,735 I - Mean number of atoms per structure: 17.8
+2025-06-03 17:37:30,749 I - Min/max energy per atom: [-65.474, 29.558] eV/atom
+2025-06-03 17:37:30,750 I - Min/max abs energy per atom: [28.765, 65.474] eV/atom
+2025-06-03 17:37:30,750 W - 
+##################################################################
+#                                                                #
+# Some values of corrected energy -65.5 eV/atom are too extreme, #
+# i.e. <-20 eV/atom or >250 eV/atom                              #
+# `reference_energy` will be computed automatically.             #
+#                                                                #
+##################################################################
+2025-06-03 17:37:30,765 I - Processing structures dataframe. Shape: (1000, 8)
+2025-06-03 17:37:30,765 I - Total number of atoms: 17832
+2025-06-03 17:37:30,765 I - Mean number of atoms per structure: 17.8
+2025-06-03 17:37:30,768 I - Reference energy is provided, constructing 'energy_corrected'
+2025-06-03 17:37:30,768 I - Computing least-square energy shift and correction
+2025-06-03 17:37:30,803 I - Computed single-atom reference energy: {'C': -253.62804846011176, 'shift': -0.49552315738716857}
+2025-06-03 17:37:30,814 I - Min/max energy per atom: [-0.798, 0.015] eV/atom
+2025-06-03 17:37:30,815 I - Min/max abs energy per atom: [0.000, 0.798] eV/atom
+2025-06-03 17:37:30,885 I - Attaching SinglePointCalculator to ASE atoms...done
+2025-06-03 17:37:30,885 I - Construction of neighbour lists...
+2025-06-03 17:37:30,885 I - Building 'tp_atoms' (dataset size 1000, cutoff=5.000A)...
+2025-06-03 17:37:31,676 I - Dataframe size after transform: 1000
+2025-06-03 17:37:31,676 I - Construction of neighbour lists...done within 0.791 sec (0.0444 ms/atom)
+2025-06-03 17:37:31,677 I - Search for dataset file(s): ['../../../../datasets/Val1k_dia10to11k.pckl.gzip']
+2025-06-03 17:37:31,677 I - #1/1: try to load ../../../../datasets/Val1k_dia10to11k.pckl.gzip
