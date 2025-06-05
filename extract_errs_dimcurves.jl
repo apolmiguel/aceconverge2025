@@ -39,7 +39,8 @@ println("\nAssigning weights")
 # weights = Dict("shaiducarbon" => Dict("E" => elossweight, "F" => 1.0)) # loss weights
 weights = Dict("default" => Dict("E" => elossweight, "F" => 1.0)) # loss weights
 println("Weights: ", weights)
-datakeys = (energy_key = "energy", force_key = "force")
+# datakeys = (energy_key = "energy", force_key = "force") # if Carbon
+datakeys = (energy_key = "energy", force_key = "forces") # if Silicon
 train_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in train_data]
 val_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in val_data]
 
@@ -60,11 +61,11 @@ for (i, label) in enumerate(basis_tags)
     dimerdir = rundir * "dimercurve.dat"
     println("Loading potential from $(potdir).")
     pot = load_potential(potdir)
-    train_err = ACEpotentials.linear_errors(train_atoms, pot)
-    println("Writing errors to $(train_errdir).")
-    writedlm(train_errdir, train_err)
-    test_err = ACEpotentials.linear_errors(val_atoms, pot)
-    println("Writing errors to $(test_errdir).")
+    # train_err = ACEpotentials.linear_errors(train_atoms, pot)
+    # println("Writing errors to $(train_errdir).")
+    # writedlm(train_errdir, train_err)
+    # test_err = ACEpotentials.linear_errors(val_atoms, pot)
+    # println("Writing errors to $(test_errdir).")
     writedlm(test_errdir, test_err)
     D = ACEpotentials.dimers(pot, [:Si,]; rr = range(0.529177, 7.0, length=200))
     # D = ACEpotentials.dimers(pot, [:C,]; rr = range(0.529177, 7.0, length=200))

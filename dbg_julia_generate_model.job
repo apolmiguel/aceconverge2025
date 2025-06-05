@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=1e2pblr
+#SBATCH --job-name=dbg_SIsi_inD_ecost50
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -13,16 +13,13 @@
 #SBATCH --time 00:30:00
 
 # Variables
-traindir=datasets/Tr1k_n.xyz
-valdir=datasets/Val1k_n.xyz
+# traindir=datasets/Tr1k_n_morse.xyz
+traindirs=(datasets/Si23.xyz datasets/Si234.xyz datasets/Si2345.xyz)
+valdirs=datasets/Si5.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
-pureflag=purify # if pureflag=purify, use pure model
+pureflag=van # if pureflag=purify, use pure model
+# ecost=(10 30 50)
 ecost=50
-solverflag=BLR
-dampvals=(1e-15 1e-9 5e-9 1e-8)
-# dampvals=(1e-15 1e-9 1e-7 1e-5)
-# dampvals=(1e-15 1e-9 5e-9 1e-8 1e-7 1e-5 1e-3)
-# basisvals=(40.12 40.12.8 40.12.8.4)
 
 # Load modules
 . ~/bin/module_load_ace
@@ -30,13 +27,11 @@ dampvals=(1e-15 1e-9 5e-9 1e-8)
 # Your commands here
 date
 
-for damp in "${dampvals[@]}"; do
-    dampval=$damp
-    echo "Running with dampval = $dampval"
-    # Run the Julia script with the current value of dampval
-    julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval $solverflag
+for traindir in "${traindirs[@]}"; do
+    echo "Running with training set $traindir"
+    julia trainmodel.jl $traindir $rcutflag $pureflag $ecost
+    julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $ecost
 done
-# julia trainmodel.jl $traindir $rcutflag $pureflag $ecost $dampval
-julia extract_errs_dimcurves.jl $traindir $valdir $pureflag
+
 date
 

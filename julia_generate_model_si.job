@@ -1,19 +1,20 @@
 #!/bin/bash
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
-#SBATCH --job-name=SIsi_OOD
+#SBATCH --qos=boost_qos_dbg
+#SBATCH --job-name=SIsi_inD_forcecheck
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:1
-#SBATCH --time 1-00:00:00
+#SBATCH --time 00:30:00
 
 # Variables
 # traindir=datasets/Tr1k_n_morse.xyz
-traindirs=(datasets/Si2.xyz datasets/Si3.xyz datasets/Si4.xyz datasets/Si5.xyz)
+traindirs=(datasets/Si23.xyz datasets/Si234.xyz datasets/Si2345.xyz)
 valdir=datasets/Si5.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=van # if pureflag=purify, use pure model
@@ -25,16 +26,10 @@ ecost=50
 # Your commands here
 date
 
-# for ecostval in "${ecost[@]}"; do
-#     echo "Running with ecostval = $ecostval"
-#     julia trainmodel.jl $traindir $rcutflag $pureflag $ecostval
-#     julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $ecostval
-# done
-
 for traindir in "${traindirs[@]}"; do
     echo "Running with training set $traindir"
     julia trainmodel.jl $traindir $rcutflag $pureflag $ecost
-    julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $ecost
+    # julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $ecost
 done
 date
 

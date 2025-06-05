@@ -30,9 +30,9 @@ println("(with Fcost = 1.0), Ecost = $elossweight.")
 # orders = [2,3,4]
 # degrees = [[24,20],[24,20,16],[24,20,16,12]]
 # basis_tags = ["24.20","24.20.16","24.20.16.12"]
-orders = [2,3]
-degrees = [[24,20],[24,20,16]]
-basis_tags = ["24.20","24.20.16"]
+# orders = [2,3]
+# degrees = [[24,20],[24,20,16]]
+# basis_tags = ["24.20","24.20.16"]
 orders = [4]
 degrees = [[24,20,16,12]]
 basis_tags = ["24.20.16.12"]
@@ -48,7 +48,8 @@ println("Assigning weights.")
 # weights = Dict("shaiducarbon" => Dict("E" => elossweight, "F" => 1.0))
 weights = Dict("default" => Dict("E" => elossweight, "F" => 1.0))
 println("Weights: ", weights)
-datakeys = (energy_key = "energy", force_key = "force")
+# datakeys = (energy_key = "energy", force_key = "force") # if Carbon
+datakeys = (energy_key = "energy", force_key = "forces") # if Silicon 
 train_atoms = [ACEpotentials.AtomsData(t; weights=weights, v_ref=Vref, datakeys...) for t in train_data]
 
 
@@ -64,7 +65,7 @@ for (i, label) in enumerate(basis_tags)
         r0 = r0,
         pure = pureflag)
     println("Basis for $label created, with $(length(basis)) basis functions.")
-    println("Basis is: \n", basis, "\n")
+    # println("Basis is: \n", basis, "\n")
 
     # Linear problem assembly
     potdir = prefix * label * "/" * "ecost$(elossweight)/"
@@ -73,6 +74,9 @@ for (i, label) in enumerate(basis_tags)
 
     println("\nAssembling linear problem elements: A, Y, W for basis set: $label.")
     A, Y, W = ACEfit.assemble(train_atoms, basis)
+    println("Linear problem assembled, with $(size(A, 1)) rows and $(size(A, 2)) columns.")
+    # println("Matrix A: \n", A, "\n") # careful for this and W; heavy output
+    # println("Weights matrix W: \n", W, "\n") # care
     solver = ACEfit.BLR()
     println("Solving linear problem.")
     results = ACEfit.solve(solver, W .* A, W .* Y)
