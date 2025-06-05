@@ -27,15 +27,15 @@ println("(with Fcost = 1.0), Ecost = $elossweight.")
 
 
 ## Control parameters ##
-# orders = [2,3,4]
-# degrees = [[24,20],[24,20,16],[24,20,16,12]]
-# basis_tags = ["24.20","24.20.16","24.20.16.12"]
+orders = [2,3,4]
+degrees = [[24,20],[24,20,16],[24,20,16,12]]
+basis_tags = ["24.20","24.20.16","24.20.16.12"]
 # orders = [2,3]
 # degrees = [[24,20],[24,20,16]]
 # basis_tags = ["24.20","24.20.16"]
-orders = [4]
-degrees = [[24,20,16,12]]
-basis_tags = ["24.20.16.12"]
+# orders = [4]
+# degrees = [[24,20,16,12]]
+# basis_tags = ["24.20.16.12"]
 # r0 = 1.286958464 # equilibrium length from dimer dataset
 r0 = 2.20707071 # Si2 dip length
 
