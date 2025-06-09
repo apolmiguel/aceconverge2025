@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=SI345p
+#SBATCH --job-name=SIp_trvalsplit
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -14,11 +14,10 @@
 
 # Variables
 # traindir=datasets/Tr1k_n_morse.xyz
-traindirs=(datasets/Si345.xyz)
+traindirs=(datasets/Si2_train.xyz datasets/Si23_train.xyz datasets/Si234_train.xyz datasets/Si2345_train.xyz)
 valdirs=datasets/Si5.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=purify # if pureflag=purify, use pure model
-# ecost=(10 30 50)
 ecost=50
 
 # Load modules
@@ -26,18 +25,15 @@ ecost=50
 
 # Your commands here
 date
-
 # for ecostval in "${ecost[@]}"; do
 #     echo "Running with ecostval = $ecostval"
 #     julia trainmodel.jl $traindir $rcutflag $pureflag $ecostval
 #     julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $ecostval
 # done
-
 for traindir in "${traindirs[@]}"; do
     echo "Running with training set $traindir"
     julia trainmodel.jl $traindir $rcutflag $pureflag $ecost
     # julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $ecost
 done
-
 date
 

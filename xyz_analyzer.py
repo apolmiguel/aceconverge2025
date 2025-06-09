@@ -14,17 +14,17 @@ e1b = -7881.32677981122 # isolated energy of Si atom (chong2025)
 
 
 ## shuffle and split dataset to train and validation ##
-# np.random.seed(42)  # for reproducibility
-# np.random.shuffle(dataset)  # shuffle the dataset
-# split_index = int(0.9 * len(dataset))  # 90% for training
-# train_dataset = dataset[:split_index]
-# val_dataset = dataset[split_index:]  # remaining 10% for validation
-# write(f'datasets/{dset}_train.xyz', train_dataset, format='xyz')
-# write(f'datasets/{dset}_val.xyz', val_dataset, format='xyz')
-# print(f'Train dataset size: {len(train_dataset)}')
-# print(f'Validation dataset size: {len(val_dataset)}')
-# print(f'Train dataset saved to datasets/{dset}_train.xyz')
-# print(f'Validation dataset saved to datasets/{dset}_val.xyz')
+np.random.seed(42)  # for reproducibility
+np.random.shuffle(dataset)  # shuffle the dataset
+split_index = int(0.9 * len(dataset))  # 90% for training
+train_dataset = dataset[:split_index]
+val_dataset = dataset[split_index:]  # remaining 10% for validation
+write(f'datasets/{dset}_train.xyz', train_dataset, format='extxyz')
+write(f'datasets/{dset}_val.xyz', val_dataset, format='extxyz')
+print(f'Train dataset size: {len(train_dataset)}')
+print(f'Validation dataset size: {len(val_dataset)}')
+print(f'Train dataset saved to datasets/{dset}_train.xyz')
+print(f'Validation dataset saved to datasets/{dset}_val.xyz')
 
 
 

@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=SI345si
+#SBATCH --job-name=SIsi_trvalsplit
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -14,7 +14,7 @@
 
 # Variables
 # traindir=datasets/Tr1k_n_morse.xyz
-traindirs=(datasets/Si345.xyz)
+traindirs=(datasets/Si2_train.xyz datasets/Si23_train.xyz datasets/Si234_train.xyz datasets/Si2345_train.xyz)
 valdir=datasets/Si5.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=van # if pureflag=purify, use pure model
@@ -25,7 +25,6 @@ ecost=50
 
 # Your commands here
 date
-
 for traindir in "${traindirs[@]}"; do
     echo "Running with training set $traindir"
     julia trainmodel.jl $traindir $rcutflag $pureflag $ecost
