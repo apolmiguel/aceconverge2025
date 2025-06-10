@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=SIp_trvalsplit
+#SBATCH --job-name=SIp_OOD_trvalsplit
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -14,7 +14,7 @@
 
 # Variables
 # traindir=datasets/Tr1k_n_morse.xyz
-traindirs=(datasets/Si2_train.xyz datasets/Si23_train.xyz datasets/Si234_train.xyz datasets/Si2345_train.xyz)
+traindirs=(datasets/Si345_train.xyz datasets/Si3_train.xyz datasets/Si4_train.xyz datasets/Si5_train.xyz)
 valdirs=datasets/Si5.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=purify # if pureflag=purify, use pure model
