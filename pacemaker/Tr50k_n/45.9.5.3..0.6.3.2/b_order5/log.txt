@@ -1,0 +1,138 @@
+2024-08-30 09:25:08,459 I - Start pacemaker
+2024-08-30 09:25:08,459 I - Hostname: login05.leonardo.local
+2024-08-30 09:25:08,459 I - Username: atan0000
+2024-08-30 09:25:08,459 I - pacemaker/pyace version: 0.3.0
+2024-08-30 09:25:08,459 I - ace_evaluator   version: 2023.11.25
+2024-08-30 09:25:08,459 I - Loading input.yaml... 
+2024-08-30 09:25:08,473 I - Set numpy random seed to 42
+2024-08-30 09:25:08,562 I - Ladder-scheme fitting is ON
+2024-08-30 09:25:08,562 I - Initial potential is NOT provided, starting from empty potential
+2024-08-30 09:25:08,617 I - Target potential shape constructed from dictionary, it contains 1230 functions
+2024-08-30 09:25:08,686 I - Ladder_type: body_order is selected
+2024-08-30 09:25:16,041 I - tensorpot_version: 0+untagged.18.g8776209
+2024-08-30 09:25:16,041 I - User name automatically identified: atan0000
+2024-08-30 09:25:16,041 I - Search for dataset file(s): ['../Tr50k_n.pckl.gzip']
+2024-08-30 09:25:16,041 I - #1/1: try to load ../Tr50k_n.pckl.gzip
+2024-08-30 09:25:16,041 I - Loading dataframe from pickle file ../Tr50k_n.pckl.gzip (47.0MiB)
+2024-08-30 09:25:18,007 I -  50000 structures found
+2024-08-30 09:25:18,772 I - Processing structures dataframe. Shape: (50000, 6)
+2024-08-30 09:25:18,772 I - Total number of atoms: 947536
+2024-08-30 09:25:18,772 I - Mean number of atoms per structure: 19.0
+2024-08-30 09:25:19,460 I - Min/max energy per atom: [-230.196, 47.385] eV/atom
+2024-08-30 09:25:19,460 I - Min/max abs energy per atom: [46.185, 230.196] eV/atom
+2024-08-30 09:25:19,460 W - 
+#################################################################
+#                                                               #
+# Some values of corrected energy -230 eV/atom are too extreme, #
+# i.e. <-20 eV/atom or >250 eV/atom                             #
+# `reference_energy` will be computed automatically.            #
+#                                                               #
+#################################################################
+2024-08-30 09:25:20,212 I - Processing structures dataframe. Shape: (50000, 8)
+2024-08-30 09:25:20,212 I - Total number of atoms: 947536
+2024-08-30 09:25:20,212 I - Mean number of atoms per structure: 19.0
+2024-08-30 09:25:20,377 I - Reference energy is provided, constructing 'energy_corrected'
+2024-08-30 09:25:20,377 I - Computing least-square energy shift and correction
+2024-08-30 09:25:21,730 I - Computed single-atom reference energy: {'C': -253.88410338784118, 'shift': -0.6838582145370253}
+2024-08-30 09:25:22,251 I - Min/max energy per atom: [-1.117, 0.083] eV/atom
+2024-08-30 09:25:22,251 I - Min/max abs energy per atom: [0.000, 1.117] eV/atom
+2024-08-30 09:25:26,119 I - Attaching SinglePointCalculator to ASE atoms...done
+2024-08-30 09:25:26,120 I - Construction of neighbour lists...
+2024-08-30 09:25:26,120 I - Building 'tp_atoms' (dataset size 50000, cutoff=5.000A)...
+2024-08-30 09:26:03,780 I - Dataframe size after transform: 50000
+2024-08-30 09:26:03,781 I - Construction of neighbour lists...done within 37.7 sec (0.0397 ms/atom)
+2024-08-30 09:26:03,782 I - Search for dataset file(s): ['../Val1k_n.pckl.gzip']
+2024-08-30 09:26:03,782 I - #1/1: try to load ../Val1k_n.pckl.gzip
+2024-08-30 09:26:03,782 I - Loading dataframe from pickle file ../Val1k_n.pckl.gzip (986.4KiB)
+2024-08-30 09:26:04,209 I -  1000 structures found
+2024-08-30 09:26:04,226 I - Processing structures dataframe. Shape: (1000, 6)
+2024-08-30 09:26:04,226 I - Total number of atoms: 19456
+2024-08-30 09:26:04,226 I - Mean number of atoms per structure: 19.5
+2024-08-30 09:26:04,230 I - Reference energy is provided, constructing 'energy_corrected'
+2024-08-30 09:26:04,230 I - Using {'C': -253.88410338784118, 'shift': -0.6838582145370253} as single-atom energies
+2024-08-30 09:26:04,256 I - Min/max energy per atom: [-1.117, 0.081] eV/atom
+2024-08-30 09:26:04,256 I - Min/max abs energy per atom: [0.001, 1.117] eV/atom
+2024-08-30 09:26:04,328 I - Attaching SinglePointCalculator to ASE atoms...done
+2024-08-30 09:26:04,328 I - Construction of neighbour lists...
+2024-08-30 09:26:04,328 I - Building 'tp_atoms' (dataset size 1000, cutoff=5.000A)...
+2024-08-30 09:26:05,072 I - Dataframe size after transform: 1000
+2024-08-30 09:26:05,072 I - Construction of neighbour lists...done within 0.744 sec (0.0382 ms/atom)
+2024-08-30 09:26:05,072 I - No weighting policy is specified, setting default weighting policy
+2024-08-30 09:26:05,072 I - Apply weights policy: UniformWeightingPolicy()
+2024-08-30 09:26:05,519 I - No weighting policy is specified, setting default weighting policy
+2024-08-30 09:26:05,519 I - Apply weights policy: UniformWeightingPolicy()
+2024-08-30 09:26:05,914 I - Saving 'reference_energy' to potential metadata
+2024-08-30 09:26:19,075 I - Dataset saved into fitting_data_info.pckl.gzip
+2024-08-30 09:26:19,322 I - Dataset saved into test_data_info.pckl.gzip
+2024-08-30 09:26:19,322 I - Plotting train energy-forces distribution
+2024-08-30 09:26:20,357 I - Plotting test energy-forces distribution
+2024-08-30 09:26:20,832 I - Dry run is finished
+2024-08-30 09:30:07,563 I - Start pacemaker
+2024-08-30 09:30:07,563 I - Hostname: login05.leonardo.local
+2024-08-30 09:30:07,563 I - Username: atan0000
+2024-08-30 09:30:07,563 I - pacemaker/pyace version: 0.3.0
+2024-08-30 09:30:07,563 I - ace_evaluator   version: 2023.11.25
+2024-08-30 09:30:07,563 I - Loading input.yaml... 
+2024-08-30 09:30:07,577 I - Set numpy random seed to 42
+2024-08-30 09:30:07,663 I - Ladder-scheme fitting is ON
+2024-08-30 09:30:07,663 I - Initial potential is NOT provided, starting from empty potential
+2024-08-30 09:30:07,717 I - Target potential shape constructed from dictionary, it contains 1230 functions
+2024-08-30 09:30:07,786 I - Ladder_type: body_order is selected
+2024-08-30 09:30:14,854 I - tensorpot_version: 0+untagged.18.g8776209
+2024-08-30 09:30:14,854 I - User name automatically identified: atan0000
+2024-08-30 09:30:14,854 I - Search for dataset file(s): ['../Tr50k_n.pckl.gzip']
+2024-08-30 09:30:14,854 I - #1/1: try to load ../Tr50k_n.pckl.gzip
+2024-08-30 09:30:14,854 I - Loading dataframe from pickle file ../Tr50k_n.pckl.gzip (47.0MiB)
+2024-08-30 09:30:16,795 I -  50000 structures found
+2024-08-30 09:30:17,576 I - Processing structures dataframe. Shape: (50000, 6)
+2024-08-30 09:30:17,576 I - Total number of atoms: 947536
+2024-08-30 09:30:17,576 I - Mean number of atoms per structure: 19.0
+2024-08-30 09:30:18,264 I - Min/max energy per atom: [-230.196, 47.385] eV/atom
+2024-08-30 09:30:18,264 I - Min/max abs energy per atom: [46.185, 230.196] eV/atom
+2024-08-30 09:30:18,264 W - 
+#################################################################
+#                                                               #
+# Some values of corrected energy -230 eV/atom are too extreme, #
+# i.e. <-20 eV/atom or >250 eV/atom                             #
+# `reference_energy` will be computed automatically.            #
+#                                                               #
+#################################################################
+2024-08-30 09:30:19,023 I - Processing structures dataframe. Shape: (50000, 8)
+2024-08-30 09:30:19,023 I - Total number of atoms: 947536
+2024-08-30 09:30:19,023 I - Mean number of atoms per structure: 19.0
+2024-08-30 09:30:19,191 I - Reference energy is provided, constructing 'energy_corrected'
+2024-08-30 09:30:19,191 I - Computing least-square energy shift and correction
+2024-08-30 09:30:20,539 I - Computed single-atom reference energy: {'C': -253.88410338784118, 'shift': -0.6838582145370253}
+2024-08-30 09:30:21,057 I - Min/max energy per atom: [-1.117, 0.083] eV/atom
+2024-08-30 09:30:21,057 I - Min/max abs energy per atom: [0.000, 1.117] eV/atom
+2024-08-30 09:30:24,857 I - Attaching SinglePointCalculator to ASE atoms...done
+2024-08-30 09:30:24,857 I - Construction of neighbour lists...
+2024-08-30 09:30:24,858 I - Building 'tp_atoms' (dataset size 50000, cutoff=5.000A)...
+2024-08-30 09:31:02,418 I - Dataframe size after transform: 50000
+2024-08-30 09:31:02,420 I - Construction of neighbour lists...done within 37.6 sec (0.0396 ms/atom)
+2024-08-30 09:31:02,420 I - Search for dataset file(s): ['../Val1k_n.pckl.gzip']
+2024-08-30 09:31:02,420 I - #1/1: try to load ../Val1k_n.pckl.gzip
+2024-08-30 09:31:02,420 I - Loading dataframe from pickle file ../Val1k_n.pckl.gzip (986.4KiB)
+2024-08-30 09:31:02,832 I -  1000 structures found
+2024-08-30 09:31:02,850 I - Processing structures dataframe. Shape: (1000, 6)
+2024-08-30 09:31:02,850 I - Total number of atoms: 19456
+2024-08-30 09:31:02,850 I - Mean number of atoms per structure: 19.5
+2024-08-30 09:31:02,853 I - Reference energy is provided, constructing 'energy_corrected'
+2024-08-30 09:31:02,853 I - Using {'C': -253.88410338784118, 'shift': -0.6838582145370253} as single-atom energies
+2024-08-30 09:31:02,879 I - Min/max energy per atom: [-1.117, 0.081] eV/atom
+2024-08-30 09:31:02,879 I - Min/max abs energy per atom: [0.001, 1.117] eV/atom
+2024-08-30 09:31:02,950 I - Attaching SinglePointCalculator to ASE atoms...done
+2024-08-30 09:31:02,950 I - Construction of neighbour lists...
+2024-08-30 09:31:02,950 I - Building 'tp_atoms' (dataset size 1000, cutoff=5.000A)...
+2024-08-30 09:31:03,695 I - Dataframe size after transform: 1000
+2024-08-30 09:31:03,695 I - Construction of neighbour lists...done within 0.746 sec (0.0383 ms/atom)
+2024-08-30 09:31:03,695 I - No weighting policy is specified, setting default weighting policy
+2024-08-30 09:31:03,695 I - Apply weights policy: UniformWeightingPolicy()
+2024-08-30 09:31:04,155 I - No weighting policy is specified, setting default weighting policy
+2024-08-30 09:31:04,155 I - Apply weights policy: UniformWeightingPolicy()
+2024-08-30 09:31:04,549 I - Saving 'reference_energy' to potential metadata
+2024-08-30 09:31:17,681 I - Dataset saved into fitting_data_info.pckl.gzip
+2024-08-30 09:31:17,928 I - Dataset saved into test_data_info.pckl.gzip
+2024-08-30 09:31:17,929 I - Plotting train energy-forces distribution
+2024-08-30 09:31:18,939 I - Plotting test energy-forces distribution
+2024-08-30 09:31:19,423 I - Dry run is finished

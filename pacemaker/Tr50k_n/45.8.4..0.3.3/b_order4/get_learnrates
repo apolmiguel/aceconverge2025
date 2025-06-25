@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# loss/learning rate 
+grep 'Iteration[^:]' log.txt | awk '{print $6,$10,$14,$19}' | sed 's/#//g' > lrnrate.dat
+
+# validation error rate
+grep -A 1 'TEST STATS' log.txt | grep 'Iteration' | awk '{print $2, $(NF-1)}' | sed 's/#//g' | sed 's/Loss://g' > vallrn_l.dat
+grep -A 12 'TEST STATS' log.txt | grep 'RMSE' | awk '{print $2, $4}' > vallrn_ef.dat
+paste vallrn_l.dat vallrn_ef.dat > vallrn.dat
+
