@@ -4,6 +4,7 @@ sbatch*
 scratch.jl
 datasets/Tr10k_n.xyz
 datasets/Tr50k_n.xyz
+datasets/C_dataset.pckl.gzip
 example2gzip.py
 morse.ipynb
 examples2clusters.py

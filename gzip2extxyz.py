@@ -1,5 +1,5 @@
 import numpy as np
-import pandas as p
+import pandas as pd
 import sys 
 
 from y2ace_funcs import *

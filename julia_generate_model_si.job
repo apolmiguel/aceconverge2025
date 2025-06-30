@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
-#SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=SIsi_OOD_trvalsplit
+##SBATCH --qos=boost_qos_dbg
+#SBATCH --job-name=Carbon_si_50k
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -10,15 +10,15 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:1
-#SBATCH --time 00:30:00
+#SBATCH --time 1-00:00:00
 
 # Variables
 # traindir=datasets/Tr1k_n_morse.xyz
-traindirs=(datasets/Si345_train.xyz datasets/Si3_train.xyz datasets/Si4_train.xyz datasets/Si5_train.xyz)
-valdir=datasets/Si5.xyz
+traindirs=(datasets/Tr50k_n.xyz)
+valdirs=datasets/Val1k_n.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=van # if pureflag=purify, use pure model
-ecost=50
+ecost=10
 
 # Load modules
 . ~/bin/module_load_ace
