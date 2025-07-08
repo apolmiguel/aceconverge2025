@@ -27,9 +27,12 @@ println("(with Fcost = 1.0), Ecost = $elossweight.")
 
 
 ## Control parameters ##
-orders = [2,3,4]
-degrees = [[24,20],[24,20,16],[24,20,16,12]]
-basis_tags = ["24.20","24.20.16","24.20.16.12"]
+# orders = [2,3,4]
+# degrees = [[24,20],[24,20,16],[24,20,16,12]]
+# basis_tags = ["24.20","24.20.16","24.20.16.12"]
+orders = [4]
+degrees = [[46,20,14,10]]
+basis_tags = ["46.20.14.10"]
 # r0 = 2.20707071 # Si2 dip length
 r0 = 1.287 # C2 dip length
 
@@ -78,5 +81,6 @@ for (i, label) in enumerate(basis_tags)
     println("Creating potential.")
     pot = JuLIP.MLIPs.SumIP(Vref, JuLIP.MLIPs.combine(basis, results["C"]))
     println("Saving potential to $potdir.")
-    save_potential(potdir * "potential.json", pot)
+    save_potential(potdir * "potential_BLR.json", pot) 
+    # save_potential(potdir * "potential.json", pot) 
 end

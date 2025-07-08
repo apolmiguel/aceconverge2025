@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 #SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=dbg_SIsi_inD_ecost50
+#SBATCH --job-name=c1k_p_46.20.14.10
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -14,12 +14,12 @@
 
 # Variables
 # traindir=datasets/Tr1k_n_morse.xyz
-traindirs=(datasets/Si23.xyz datasets/Si234.xyz datasets/Si2345.xyz)
-valdirs=datasets/Si5.xyz
+traindirs=(datasets/Tr1k_n.xyz)
+# valdirs=datasets/Si5.xyz
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
-pureflag=van # if pureflag=purify, use pure model
+pureflag=purify # if pureflag=purify, use pure model
 # ecost=(10 30 50)
-ecost=50
+ecost=10
 
 # Load modules
 . ~/bin/module_load_ace
@@ -30,7 +30,7 @@ date
 for traindir in "${traindirs[@]}"; do
     echo "Running with training set $traindir"
     julia trainmodel.jl $traindir $rcutflag $pureflag $ecost
-    julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $ecost
+    # julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $ecost
 done
 
 date
