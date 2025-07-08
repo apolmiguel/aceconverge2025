@@ -2,7 +2,7 @@
 #SBATCH -A Sis25_degironc_0
 #SBATCH -p boost_usr_prod
 ##SBATCH --qos=boost_qos_dbg
-#SBATCH --job-name=Carbon_si_50k
+#SBATCH --job-name=SI_si_ind_v2only
 #SBATCH --output=sbatch/jobouts/%x.%j.out
 #SBATCH --error=sbatch/joberrs/%x.%j.err
 #SBATCH --mem=100000MB
@@ -10,15 +10,14 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:1
-#SBATCH --time 1-00:00:00
+#SBATCH --time 00:30:00
 
 # Variables
-# traindir=datasets/Tr1k_n_morse.xyz
-traindirs=(datasets/Tr50k_n.xyz)
-valdirs=datasets/Val1k_n.xyz
+traindirs=(datasets/Si2_train.xyz datasets/Si23_train.xyz datasets/Si234_train.xyz datasets/Si2345_train.xyz)
 rcutflag=gen # if rcutflag=dim, rcut = 7.0 instead of 5.0
 pureflag=van # if pureflag=purify, use pure model
-ecost=10
+ecost=50
+
 
 # Load modules
 . ~/bin/module_load_ace
@@ -27,7 +26,7 @@ ecost=10
 date
 for traindir in "${traindirs[@]}"; do
     echo "Running with training set $traindir"
-    julia trainmodel.jl $traindir $rcutflag $pureflag $ecost
+    julia trainmodel_v2.jl $traindir $rcutflag $pureflag $ecost
     # julia extract_errs_dimcurves.jl $traindir $valdir $pureflag $ecost
 done
 date
